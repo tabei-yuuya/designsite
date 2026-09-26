@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BLOG ブログ｜yuyadesign</title>
+<meta name="description" content="制作の裏側や、伝わるデザインの考え方、プロジェクトの事例を発信しています。">
+<meta name="theme-color" content="#0F1012">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@700&amp;family=Geist:wght@300;400&amp;family=Noto+Sans+JP:wght@400;700&amp;family=Shippori+Mincho:wght@400&amp;display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/blog.js" defer></script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">本文へスキップ</a>
+<header class="site-header">
+  <a class="logo" href="index.html">yuyadesign<span class="dot" aria-hidden="true"></span></a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="メニューを開く" data-menu-open>
+    <span class="menu-btn__line"></span><span class="menu-btn__line"></span>
+  </button>
+</header>
+<div class="menu" id="site-menu" role="dialog" aria-modal="true" aria-label="メニュー" hidden>
+  <div class="site-header">
+    <span class="logo">yuyadesign<span class="dot" aria-hidden="true"></span></span>
+    <button class="menu-btn menu-btn--close" type="button" aria-expanded="true" aria-controls="site-menu" aria-label="メニューを閉じる" data-menu-close>
+      <span class="menu-btn__line"></span><span class="menu-btn__line"></span>
+    </button>
+  </div>
+  <nav class="menu__nav" aria-label="メインメニュー">
+    <a class="menu__item" href="index.html"><span class="menu__en">HOME</span><span class="menu__ja">ホーム</span></a>
+    <a class="menu__item" href="about.html"><span class="menu__en">ABOUT</span><span class="menu__ja">私たちについて</span></a>
+    <a class="menu__item" href="services.html"><span class="menu__en">SERVICES</span><span class="menu__ja">サービス</span></a>
+    <a class="menu__item" href="blog.html" aria-current="page"><span class="menu__en">BLOG</span><span class="menu__ja">ブログ</span></a>
+    <a class="menu__item" href="contact.html"><span class="menu__en">CONTACT</span><span class="menu__ja">お問い合わせ</span></a>
+  </nav>
+  <div class="menu__foot">
+    <a class="btn btn--en" href="contact.html">CONTACT<span aria-hidden="true">→</span></a>
+    <div class="menu__sns"><a href="#" target="_blank" rel="noopener">X ↗</a><a href="#" target="_blank" rel="noopener">YouTube ↗</a><a href="#" target="_blank" rel="noopener">TikTok ↗</a></div>
+  </div>
+</div>
+<main id="main">
+
+  <section class="page-hero">
+    <nav class="crumb" aria-label="パンくずリスト"><ol><li><a href="index.html">HOME</a></li><li><span aria-current="page">BLOG</span></li></ol></nav>
+    <div class="page-hero__body">
+      <div class="page-hero__en" aria-hidden="true">Blog</div>
+      <h1 class="page-hero__ja">ブログ</h1>
+      <p class="page-hero__lead">制作の裏側や、伝わるデザインの考え方、プロジェクトの事例を発信しています。</p>
+    </div>
+  </section>
+  <div class="tabs" role="tablist" aria-label="カテゴリ">
+    <button class="tab" type="button" role="tab" aria-selected="true" aria-controls="blog-list" data-cat="すべて">すべて</button>
+    <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="blog-list" data-cat="デザイン">デザイン</button>
+    <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="blog-list" data-cat="制作事例">制作事例</button>
+    <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="blog-list" data-cat="お知らせ">お知らせ</button>
+  </div>
+  <section class="blog-list" id="blog-list" role="tabpanel" aria-label="記事一覧">
+    <div data-featured>
+      <a class="post-featured" href="blog-post.html">
+        <div class="ph" aria-hidden="true">eyecatch</div>
+        <div class="meta"><span>デザイン</span><time class="en" datetime="2026-09-12">2026.09.12</time></div>
+        <h2 class="post-featured__title">「整える」と「伝わる」のあいだにあるもの。デザインを始める前に考えていること</h2>
+      </a>
+    </div>
+    <div data-rest>
+        <a class="post-row" href="blog-post.html">
+          <div class="ph" aria-hidden="true"></div>
+          <div class="post-row__text">
+            <div class="meta"><span>制作事例</span><time class="en" datetime="2026-08-28">2026.08.28</time></div>
+            <span class="post-row__title">創業50年の町工場、ブランドリニューアルの記録</span>
+          </div>
+        </a>
+        <a class="post-row" href="blog-post.html">
+          <div class="ph" aria-hidden="true"></div>
+          <div class="post-row__text">
+            <div class="meta"><span>デザイン</span><time class="en" datetime="2026-08-10">2026.08.10</time></div>
+            <span class="post-row__title">採用サイトで「選ばれる」ために必要な3つの視点</span>
+          </div>
+        </a>
+        <a class="post-row" href="blog-post.html">
+          <div class="ph" aria-hidden="true"></div>
+          <div class="post-row__text">
+            <div class="meta"><span>お知らせ</span><time class="en" datetime="2026-07-30">2026.07.30</time></div>
+            <span class="post-row__title">夏季休業期間のお知らせ</span>
+          </div>
+        </a>
+        <a class="post-row" href="blog-post.html">
+          <div class="ph" aria-hidden="true"></div>
+          <div class="post-row__text">
+            <div class="meta"><span>制作事例</span><time class="en" datetime="2026-07-15">2026.07.15</time></div>
+            <span class="post-row__title">個人事業主のポートフォリオサイトができるまで</span>
+          </div>
+        </a>
+        <a class="post-row" href="blog-post.html">
+          <div class="ph" aria-hidden="true"></div>
+          <div class="post-row__text">
+            <div class="meta"><span>デザイン</span><time class="en" datetime="2026-06-22">2026.06.22</time></div>
+            <span class="post-row__title">色を減らすと、伝わりやすくなる理由</span>
+          </div>
+        </a>
+        <a class="post-row" href="blog-post.html">
+          <div class="ph" aria-hidden="true"></div>
+          <div class="post-row__text">
+            <div class="meta"><span>制作事例</span><time class="en" datetime="2026-06-05">2026.06.05</time></div>
+            <span class="post-row__title">BtoB企業のサービスサイト、情報設計のプロセス</span>
+          </div>
+        </a>
+    </div>
+    <p class="blog-empty" data-empty hidden>このカテゴリの記事はまだありません。</p>
+    <nav class="pager" aria-label="ページ送り">
+      <a href="blog.html" aria-current="page">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a class="pager__next" href="#" aria-label="次のページ">→</a>
+    </nav>
+  </section>
+  <script type="application/json" id="blog-data">[{"cat":"デザイン","date":"2026.09.12","title":"「整える」と「伝わる」のあいだにあるもの。デザインを始める前に考えていること","href":"blog-post.html"},{"cat":"制作事例","date":"2026.08.28","title":"創業50年の町工場、ブランドリニューアルの記録","href":"blog-post.html"},{"cat":"デザイン","date":"2026.08.10","title":"採用サイトで「選ばれる」ために必要な3つの視点","href":"blog-post.html"},{"cat":"お知らせ","date":"2026.07.30","title":"夏季休業期間のお知らせ","href":"blog-post.html"},{"cat":"制作事例","date":"2026.07.15","title":"個人事業主のポートフォリオサイトができるまで","href":"blog-post.html"},{"cat":"デザイン","date":"2026.06.22","title":"色を減らすと、伝わりやすくなる理由","href":"blog-post.html"},{"cat":"制作事例","date":"2026.06.05","title":"BtoB企業のサービスサイト、情報設計のプロセス","href":"blog-post.html"}]</script>
+</main>
+
+<section class="cta" aria-labelledby="cta-title">
+  <span class="eyebrow">( Contact )</span>
+  <h2 class="cta__title" id="cta-title">お問い合わせは<br>こちら</h2>
+  <p class="cta__lead">デザインのご依頼、お見積もり、ちょっとしたご相談まで、お気軽にお問い合わせください。</p>
+  <div class="status"><span class="dot" aria-hidden="true"></span>デザイン依頼 受付中</div>
+  <a class="btn btn--en" href="contact.html">CONTACT<span aria-hidden="true">→</span></a>
+</section>
+<footer class="site-footer">
+  <a class="logo" href="index.html">yuyadesign<span class="dot" aria-hidden="true"></span></a>
+  <p class="site-footer__copy">デザインで、<br>伝わるを変える。</p>
+  <div class="site-footer__cols">
+    <nav class="site-footer__nav site-footer__nav--menu" aria-label="フッターメニュー">
+      <span class="site-footer__label">( Menu )</span>
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="services.html">SERVICES</a>
+      <a href="blog.html">BLOG</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+    <nav class="site-footer__nav" aria-label="SNS">
+      <span class="site-footer__label">( Follow )</span>
+      <a href="#" target="_blank" rel="noopener">X（Twitter） ↗</a>
+      <a href="#" target="_blank" rel="noopener">YouTube ↗</a>
+      <a href="#" target="_blank" rel="noopener">TikTok ↗</a>
+      <span class="site-footer__org">運営：yuyadesign</span>
+    </nav>
+  </div>
+  <div class="site-footer__bottom">
+    <div class="site-footer__legal"><a href="privacy.html">プライバシーポリシー</a><a href="#">特定商取引法に基づく表示</a></div>
+    <small>© yuyadesign</small>
+  </div>
+</footer>
+</body>
+</html>

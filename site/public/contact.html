@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CONTACT お問い合わせ｜yuyadesign</title>
+<meta name="description" content="デザインのご依頼、お見積もり、ちょっとしたご相談まで、お気軽にお問い合わせください。">
+<meta name="theme-color" content="#0F1012">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@700&amp;family=Geist:wght@300;400&amp;family=Noto+Sans+JP:wght@400;700&amp;family=Shippori+Mincho:wght@400&amp;display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/contact.js" defer></script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">本文へスキップ</a>
+<header class="site-header">
+  <a class="logo" href="index.html">yuyadesign<span class="dot" aria-hidden="true"></span></a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="メニューを開く" data-menu-open>
+    <span class="menu-btn__line"></span><span class="menu-btn__line"></span>
+  </button>
+</header>
+<div class="menu" id="site-menu" role="dialog" aria-modal="true" aria-label="メニュー" hidden>
+  <div class="site-header">
+    <span class="logo">yuyadesign<span class="dot" aria-hidden="true"></span></span>
+    <button class="menu-btn menu-btn--close" type="button" aria-expanded="true" aria-controls="site-menu" aria-label="メニューを閉じる" data-menu-close>
+      <span class="menu-btn__line"></span><span class="menu-btn__line"></span>
+    </button>
+  </div>
+  <nav class="menu__nav" aria-label="メインメニュー">
+    <a class="menu__item" href="index.html"><span class="menu__en">HOME</span><span class="menu__ja">ホーム</span></a>
+    <a class="menu__item" href="about.html"><span class="menu__en">ABOUT</span><span class="menu__ja">私たちについて</span></a>
+    <a class="menu__item" href="services.html"><span class="menu__en">SERVICES</span><span class="menu__ja">サービス</span></a>
+    <a class="menu__item" href="blog.html"><span class="menu__en">BLOG</span><span class="menu__ja">ブログ</span></a>
+    <a class="menu__item" href="contact.html" aria-current="page"><span class="menu__en">CONTACT</span><span class="menu__ja">お問い合わせ</span></a>
+  </nav>
+  <div class="menu__foot">
+    <a class="btn btn--en" href="contact.html">CONTACT<span aria-hidden="true">→</span></a>
+    <div class="menu__sns"><a href="#" target="_blank" rel="noopener">X ↗</a><a href="#" target="_blank" rel="noopener">YouTube ↗</a><a href="#" target="_blank" rel="noopener">TikTok ↗</a></div>
+  </div>
+</div>
+<main id="main">
+
+  <section class="page-hero">
+    <nav class="crumb" aria-label="パンくずリスト"><ol><li><a href="index.html">HOME</a></li><li><span aria-current="page">CONTACT</span></li></ol></nav>
+    <div class="page-hero__body">
+      <div class="page-hero__en" aria-hidden="true">Contact</div>
+      <h1 class="page-hero__ja">お問い合わせ</h1>
+      <p class="page-hero__lead">デザインのご依頼、お見積もり、ちょっとしたご相談まで、お気軽にお問い合わせください。</p>
+    </div>
+  </section>
+  <section class="contact-intro">
+    <div class="status"><span class="dot" aria-hidden="true"></span>デザイン依頼 受付中</div>
+    <p>いただいたお問い合わせには、2営業日以内に担当者よりご返信します。</p>
+  </section>
+  <section class="contact-body" aria-label="お問い合わせフォーム">
+    <div class="form-done" role="status" tabindex="-1" data-done hidden>
+      <span class="status"><span class="dot" aria-hidden="true"></span>SENT</span>
+      <p class="form-done__title">送信が完了しました。</p>
+      <p class="form-done__body">確認メールをお送りしました。2営業日以内にご返信いたします。</p>
+      <button class="btn" type="button" data-reset>フォームに戻る</button>
+    </div>
+    <form class="form" action="#" method="post" novalidate data-contact-form>
+      <div class="field field--group" role="group" aria-labelledby="type-label">
+        <span class="field__label" id="type-label">ご依頼の種類</span>
+        <input type="hidden" name="type" value="企業様向け">
+        <div class="choices">
+          <button class="choice" type="button" aria-pressed="true" data-type="企業様向け">企業様向け</button>
+          <button class="choice" type="button" aria-pressed="false" data-type="個人のお客様向け">個人のお客様向け</button>
+          <button class="choice" type="button" aria-pressed="false" data-type="その他">その他</button>
+        </div>
+      </div>
+      <div class="field">
+        <label class="field__label" for="f-name">お名前（必須）</label>
+        <input type="text" id="f-name" name="name" class="input" placeholder="例）山田 太郎" autocomplete="name" required aria-describedby="err-name">
+        <span class="field__error" id="err-name"></span>
+      </div>
+      <div class="field">
+        <label class="field__label" for="f-company">会社名</label>
+        <input type="text" id="f-company" name="company" class="input" placeholder="例）株式会社サンプル" autocomplete="organization">
+      </div>
+      <div class="field">
+        <label class="field__label" for="f-email">メールアドレス（必須）</label>
+        <input type="email" id="f-email" name="email" class="input" placeholder="例）info@example.com" autocomplete="email" required aria-describedby="err-email">
+        <span class="field__error" id="err-email"></span>
+      </div>
+      <div class="field">
+        <label class="field__label" for="f-message">お問い合わせ内容（必須）</label>
+        <textarea id="f-message" name="message" class="input" placeholder="例）サイトのリニューアルを検討しています。" required aria-describedby="err-message" rows="3"></textarea>
+        <span class="field__error" id="err-message"></span>
+      </div>
+      <div class="agree">
+        <label class="checkbox">
+          <input type="checkbox" name="agree" id="f-agree" required aria-describedby="err-agree">
+          <span><a class="inline-link" href="privacy.html">プライバシーポリシー</a>に同意する（必須）</span>
+        </label>
+        <span class="field__error" id="err-agree"></span>
+      </div>
+      <button class="btn" type="submit"><span data-submit-label>送信する</span><span aria-hidden="true">→</span></button>
+    </form>
+  </section>
+  <section class="section section--light on-light">
+    
+    <div class="sec-head">
+      <span class="eyebrow">( FAQ )</span>
+      <h2 class="h2">よくあるご質問</h2>
+    </div>
+    <div class="rule-list" data-faq>
+      <div>
+        <h3 class="faq__h"><button class="faq__q" type="button" aria-expanded="true" aria-controls="faq-a-01" id="faq-q-01"><span class="faq__no">Q.01</span><span>相談だけでも大丈夫ですか？</span><span class="faq__icon" aria-hidden="true">−</span></button></h3>
+        <p class="faq__a" id="faq-a-01" role="region" aria-labelledby="faq-q-01">はい、もちろんです。依頼するか決まっていない段階でも、お気軽にご相談ください。</p>
+      </div>
+      <div>
+        <h3 class="faq__h"><button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-a-02" id="faq-q-02"><span class="faq__no">Q.02</span><span>費用はどのくらいかかりますか？</span><span class="faq__icon" aria-hidden="true">+</span></button></h3>
+        <p class="faq__a" id="faq-a-02" role="region" aria-labelledby="faq-q-02" hidden>ご依頼内容や規模によって異なります。ヒアリングのうえ、お見積もりをご提示します。</p>
+      </div>
+      <div>
+        <h3 class="faq__h"><button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-a-03" id="faq-q-03"><span class="faq__no">Q.03</span><span>制作期間はどのくらいですか？</span><span class="faq__icon" aria-hidden="true">+</span></button></h3>
+        <p class="faq__a" id="faq-a-03" role="region" aria-labelledby="faq-q-03" hidden>ロゴ制作でおよそ1〜2か月、Webサイト制作でおよそ2〜4か月が目安です。</p>
+      </div>
+      <div>
+        <h3 class="faq__h"><button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-a-04" id="faq-q-04"><span class="faq__no">Q.04</span><span>遠方でも依頼できますか？</span><span class="faq__icon" aria-hidden="true">+</span></button></h3>
+        <p class="faq__a" id="faq-a-04" role="region" aria-labelledby="faq-q-04" hidden>はい。打ち合わせはオンラインで行うため、全国どこからでもご依頼いただけます。</p>
+      </div>
+      <div>
+        <h3 class="faq__h"><button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-a-05" id="faq-q-05"><span class="faq__no">Q.05</span><span>公開後の更新もお願いできますか？</span><span class="faq__icon" aria-hidden="true">+</span></button></h3>
+        <p class="faq__a" id="faq-a-05" role="region" aria-labelledby="faq-q-05" hidden>運用・改善サポートとして、公開後の更新や改善も承っています。</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+<footer class="site-footer">
+  <a class="logo" href="index.html">yuyadesign<span class="dot" aria-hidden="true"></span></a>
+  <p class="site-footer__copy">デザインで、<br>伝わるを変える。</p>
+  <div class="site-footer__cols">
+    <nav class="site-footer__nav site-footer__nav--menu" aria-label="フッターメニュー">
+      <span class="site-footer__label">( Menu )</span>
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="services.html">SERVICES</a>
+      <a href="blog.html">BLOG</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+    <nav class="site-footer__nav" aria-label="SNS">
+      <span class="site-footer__label">( Follow )</span>
+      <a href="#" target="_blank" rel="noopener">X（Twitter） ↗</a>
+      <a href="#" target="_blank" rel="noopener">YouTube ↗</a>
+      <a href="#" target="_blank" rel="noopener">TikTok ↗</a>
+      <span class="site-footer__org">運営：yuyadesign</span>
+    </nav>
+  </div>
+  <div class="site-footer__bottom">
+    <div class="site-footer__legal"><a href="privacy.html">プライバシーポリシー</a><a href="#">特定商取引法に基づく表示</a></div>
+    <small>© yuyadesign</small>
+  </div>
+</footer>
+</body>
+</html>
