@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><style>:root{--color-bg:#0F1012;--color-surface:#1A1B1D;--color-text:#F2F2F0;--color-text-muted:#9C9C9A;--color-border:rgba(255,255,255,0.16);--color-accent:#A6D43A;--font-ja:"Noto Sans JP","Hiragino Sans",sans-serif;--font-en:"Geist","Helvetica Neue",Helvetica,Arial,sans-serif}</style></helmet>
+<div style="color:var(--color-text)">
+  <sc-if value="{{ showCta }}" hint-placeholder-val="{{ true }}">
+    <section style="padding:128px 56px;background:var(--color-bg);border-top:1px solid var(--color-border);display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;align-items:end">
+      <div style="grid-column:1 / 9;display:flex;flex-direction:column;gap:24px">
+        <span style="font:400 13px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted)">( Contact )</span>
+        <h2 style="margin:0;font:400 72px/1.2 var(--font-ja);letter-spacing:.02em;word-break:keep-all">お問い合わせはこちら</h2>
+        <p style="margin:0;max-width:560px;font:400 16px/1.9 var(--font-ja);letter-spacing:.04em;color:var(--color-text-muted);line-break:strict">デザインのご依頼、お見積もり、ちょっとしたご相談まで、お気軽にお問い合わせください。</p>
+      </div>
+      <div style="grid-column:9 / 13;display:flex;flex-direction:column;gap:16px;align-items:flex-start">
+        <div style="display:flex;align-items:center;gap:8px;font:400 13px/1 var(--font-ja);letter-spacing:.12em"><span style="width:6px;height:6px;border-radius:50%;background:var(--color-accent)"></span>デザイン依頼 受付中</div>
+        <a href="#2f" style="width:100%;box-sizing:border-box;display:flex;justify-content:space-between;align-items:center;padding:20px 24px;border-radius:2px;background:rgba(255,255,255,.10);color:var(--color-text);text-decoration:none;font:400 13px/1 var(--font-en);letter-spacing:.12em;transition:background 200ms ease" style-hover="background:rgba(255,255,255,.18)">CONTACT<span>→</span></a>
+      </div>
+    </section>
+  </sc-if>
+  <footer style="background:var(--color-surface);padding:96px 56px 0">
+    <div style="display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;padding-bottom:96px">
+      <div style="grid-column:1 / 7;display:flex;flex-direction:column;justify-content:space-between;gap:64px">
+        <a href="#" style="display:flex;align-items:center;gap:8px;font:400 18px/1 var(--font-en);color:var(--color-text);text-decoration:none">yuyadesign<span style="width:6px;height:6px;border-radius:50%;background:var(--color-accent)"></span></a>
+        <p style="margin:0;font:400 64px/1.2 var(--font-ja);letter-spacing:.02em;word-break:keep-all">デザインで、<br>伝わるを変える。</p>
+      </div>
+      <div style="grid-column:8 / 10;display:flex;flex-direction:column;gap:24px">
+        <span style="font:400 12px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted)">( Menu )</span>
+        <nav style="display:flex;flex-direction:column;gap:20px;font:400 14px/1 var(--font-en);letter-spacing:.12em">
+          <a href="#" style="color:var(--color-text);text-decoration:none">HOME</a><a href="#2a" style="color:var(--color-text);text-decoration:none">ABOUT</a><a href="#2b" style="color:var(--color-text);text-decoration:none">SERVICES</a><a href="#2d" style="color:var(--color-text);text-decoration:none">BLOG</a><a href="#2f" style="color:var(--color-text);text-decoration:none">CONTACT</a>
+        </nav>
+      </div>
+      <div style="grid-column:10 / 13;display:flex;flex-direction:column;gap:24px">
+        <span style="font:400 12px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted)">( Follow )</span>
+        <nav style="display:flex;flex-direction:column;gap:20px;font:400 14px/1 var(--font-en);letter-spacing:.04em">
+          <a href="#" target="_blank" rel="noopener" style="color:var(--color-text);text-decoration:none">X（Twitter） ↗</a><a href="#" target="_blank" rel="noopener" style="color:var(--color-text);text-decoration:none">YouTube ↗</a><a href="#" target="_blank" rel="noopener" style="color:var(--color-text);text-decoration:none">TikTok ↗</a>
+        </nav>
+        <span style="margin-top:24px;font:400 12px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted)">( Company )</span>
+        <p style="margin:0;font:400 14px/1.8 var(--font-ja);color:var(--color-text-muted)">運営：yuyadesign</p>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:24px 0;border-top:1px solid var(--color-border);font:400 13px/1 var(--font-ja);color:var(--color-text-muted)">
+      <span style="font-family:var(--font-en)">© yuyadesign</span>
+      <div style="display:flex;gap:32px">
+        <a href="#2g" style="color:var(--color-text-muted);text-decoration:none">プライバシーポリシー</a><a href="#" style="color:var(--color-text-muted);text-decoration:none">特定商取引法に基づく表示</a>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:900},&quot;cta&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  renderVals() { return { showCta: this.props.cta !== false && this.props.cta !== 'false' }; }
+}
+</script>
+</body>
+</html>

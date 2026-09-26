@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><style>:root{--color-bg:#0F1012;--color-surface:#1A1B1D;--color-text:#F2F2F0;--color-text-muted:#9C9C9A;--color-border:rgba(255,255,255,0.16);--color-accent:#A6D43A;--font-ja:"Noto Sans JP","Hiragino Sans",sans-serif;--font-en:"Geist","Helvetica Neue",Helvetica,Arial,sans-serif}</style></helmet>
+<div style="color:var(--color-text)">
+  <sc-if value="{{ showCta }}" hint-placeholder-val="{{ true }}">
+    <section style="padding:96px 20px 48px;background:var(--color-bg);border-top:1px solid var(--color-border);display:flex;flex-direction:column;gap:24px">
+      <span style="font:400 13px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted)">( Contact )</span>
+      <h2 style="margin:0;font:400 36px/1.3 var(--font-ja);letter-spacing:.02em;word-break:keep-all">お問い合わせは<br>こちら</h2>
+      <p style="margin:0;font:400 15px/1.9 var(--font-ja);letter-spacing:.04em;color:var(--color-text-muted);line-break:strict">デザインのご依頼、お見積もり、ちょっとしたご相談まで、お気軽にお問い合わせください。</p>
+      <div style="display:flex;align-items:center;gap:8px;padding-top:8px;font:400 12px/1 var(--font-ja);letter-spacing:.12em"><span style="width:6px;height:6px;border-radius:50%;background:var(--color-accent)"></span>デザイン依頼 受付中</div>
+      <a href="#4f" style="height:48px;padding:0 20px;display:flex;align-items:center;justify-content:space-between;border-radius:2px;background:rgba(255,255,255,.10);color:var(--color-text);text-decoration:none;font:400 13px/1 var(--font-en);letter-spacing:.12em">CONTACT<span>→</span></a>
+    </section>
+  </sc-if>
+  <footer style="background:var(--color-surface);padding:64px 20px 0;display:flex;flex-direction:column;gap:48px">
+    <span style="display:flex;align-items:center;gap:8px;font:400 17px/1 var(--font-en)">yuyadesign<span style="width:6px;height:6px;border-radius:50%;background:var(--color-accent)"></span></span>
+    <p style="margin:0;font:400 32px/1.3 var(--font-ja);letter-spacing:.02em;word-break:keep-all">デザインで、<br>伝わるを変える。</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;font:400 13px/1 var(--font-en)">
+      <nav style="display:flex;flex-direction:column;letter-spacing:.12em">
+        <span style="font-size:12px;color:var(--color-text-muted);padding-bottom:8px">( Menu )</span>
+        <a href="#" style="padding:14px 0;color:var(--color-text);text-decoration:none">HOME</a><a href="#4a" style="padding:14px 0;color:var(--color-text);text-decoration:none">ABOUT</a><a href="#4b" style="padding:14px 0;color:var(--color-text);text-decoration:none">SERVICES</a><a href="#4d" style="padding:14px 0;color:var(--color-text);text-decoration:none">BLOG</a><a href="#4f" style="padding:14px 0;color:var(--color-text);text-decoration:none">CONTACT</a>
+      </nav>
+      <nav style="display:flex;flex-direction:column;letter-spacing:.04em">
+        <span style="font-size:12px;letter-spacing:.12em;color:var(--color-text-muted);padding-bottom:8px">( Follow )</span>
+        <a href="#" target="_blank" rel="noopener" style="padding:14px 0;color:var(--color-text);text-decoration:none">X（Twitter） ↗</a><a href="#" target="_blank" rel="noopener" style="padding:14px 0;color:var(--color-text);text-decoration:none">YouTube ↗</a><a href="#" target="_blank" rel="noopener" style="padding:14px 0;color:var(--color-text);text-decoration:none">TikTok ↗</a>
+        <span style="margin-top:16px;font:400 12px/1.8 var(--font-ja);color:var(--color-text-muted)">運営：yuyadesign</span>
+      </nav>
+    </div>
+    <div style="padding:20px 0 24px;border-top:1px solid var(--color-border);display:flex;flex-direction:column;gap:12px;font:400 12px/1.6 var(--font-ja);color:var(--color-text-muted)">
+      <div style="display:flex;gap:20px"><a href="#4g" style="color:var(--color-text-muted);text-decoration:none">プライバシーポリシー</a><a href="#" style="color:var(--color-text-muted);text-decoration:none">特定商取引法に基づく表示</a></div>
+      <span style="font-family:var(--font-en)">© yuyadesign</span>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:390,&quot;height&quot;:900},&quot;cta&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  renderVals() { return { showCta: this.props.cta !== false && this.props.cta !== 'false' }; }
+}
+</script>
+</body>
+</html>

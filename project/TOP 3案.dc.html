@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@700&amp;family=Geist:wght@300;400&amp;family=Noto+Sans+JP:wght@400;700&amp;family=Shippori+Mincho:wght@400&amp;display=swap">
+<style>
+:root{--color-bg:#0F1012;--color-surface:#1A1B1D;--color-surface-raised:#232324;--color-bg-alt:#2C2C2D;--color-text:#F2F2F0;--color-text-muted:#9C9C9A;--color-text-display-muted:#B5B5B3;--color-border:rgba(255,255,255,0.16);--color-overlay:rgba(0,0,0,0.45);--color-bg-light:#EEEFF0;--color-text-on-light:#4A463F;--color-text-muted-on-light:#66665F;--color-border-on-light:rgba(0,0,0,0.14);--color-accent:#A6D43A;--font-ja:"Noto Sans JP","Hiragino Sans",sans-serif;--font-ja-serif:"Shippori Mincho","Noto Serif JP","Hiragino Mincho ProN",serif;--font-en:"Geist","Helvetica Neue",Helvetica,Arial,sans-serif;--font-display:"Archivo","Helvetica Neue",sans-serif}
+body{margin:0;background:#e9e8e4;font-family:var(--font-ja);-webkit-font-smoothing:antialiased}
+a{color:var(--color-text);text-decoration:none}a:hover{opacity:.7}
+.dv-turn{padding:40px 44px 48px}.dv-thd{display:flex;align-items:baseline;gap:10px;margin:0 0 24px}.dv-tid{font:600 10px ui-monospace,Menlo,monospace;padding:3px 7px;background:#1a1a1a;color:#fff;border-radius:4px}.dv-tname{font:600 13px/1.2 system-ui,sans-serif;color:#1a1a1a}.dv-opts{display:flex;flex-wrap:wrap;gap:48px;align-items:flex-start}.dv-opt{flex:none;display:flex;flex-direction:column;gap:10px;scroll-margin-top:16px}.dv-oid{font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);color:#1a1a1a;border-radius:5px}.dv-olabel{display:flex;align-items:baseline;gap:8px;font:400 12px/1.4 system-ui,sans-serif;color:rgba(0,0,0,.6)}.dv-card{background:#0F1012;box-shadow:0 1px 3px rgba(0,0,0,.08);overflow:hidden}.dv-opt:target .dv-oid{background:#2a78d6;color:#fff}.dv-next{margin:28px 0 0;font:12px/1.5 system-ui,sans-serif;color:rgba(0,0,0,.5)}
+</style>
+</helmet>
+<section class="dv-turn" id="t1">
+<div class="dv-thd"><a class="dv-tid" href="#t1">1</a><span class="dv-tname">TOPページ 上部50%（HERO / ABOUT / SERVICES企業向け）— 1440px</span></div>
+<div class="dv-opts">
+
+<!-- ============ 1a デザイン優先 ============ -->
+<div class="dv-opt" id="1a">
+<div class="dv-olabel"><a class="dv-oid" href="#1a">1a</a>デザイン優先・シンプル — テキストは大胆に削減・英字主体</div>
+<div class="dv-card" style="width:1440px;color:var(--color-text);font-family:var(--font-ja)">
+  <header style="position:relative;height:900px;overflow:hidden;background:repeating-linear-gradient(135deg,var(--color-surface-raised) 0 14px,var(--color-surface) 14px 28px)">
+    <div style="position:absolute;inset:0;background:var(--color-overlay)"></div>
+    <div style="position:absolute;top:120px;right:80px;font:400 12px/1 ui-monospace,Menlo,monospace;color:var(--color-text-muted);letter-spacing:.1em">hero video — モノクロの制作風景</div>
+    <sc-if value="{{ showGrid }}" hint-placeholder-val="{{ true }}">
+      <div style="position:absolute;inset:0 56px;display:grid;grid-template-columns:repeat(4,1fr);pointer-events:none">
+        <div style="border-left:1px solid var(--color-border)"></div><div style="border-left:1px solid var(--color-border)"></div><div style="border-left:1px solid var(--color-border)"></div><div style="border-left:1px solid var(--color-border);border-right:1px solid var(--color-border)"></div>
+      </div>
+      <div style="position:absolute;left:0;right:0;top:80px;border-top:1px solid var(--color-border)"></div>
+      <div style="position:absolute;left:0;right:0;bottom:120px;border-top:1px solid var(--color-border)"></div>
+      <div style="position:absolute;top:77px;left:53px;width:6px;height:6px;border-radius:50%;background:var(--color-border)"></div>
+      <div style="position:absolute;top:77px;left:385px;width:6px;height:6px;border-radius:50%;background:var(--color-border)"></div>
+      <div style="position:absolute;top:77px;left:717px;width:6px;height:6px;border-radius:50%;background:var(--color-border)"></div>
+      <div style="position:absolute;top:77px;left:1049px;width:6px;height:6px;border-radius:50%;background:var(--color-border)"></div>
+      <div style="position:absolute;top:77px;right:53px;width:6px;height:6px;border-radius:50%;background:var(--color-border)"></div>
+      <div style="position:absolute;bottom:117px;left:53px;width:6px;height:6px;border-radius:50%;background:var(--color-border)"></div>
+      <div style="position:absolute;bottom:117px;right:53px;width:6px;height:6px;border-radius:50%;background:var(--color-border)"></div>
+    </sc-if>
+    <div style="position:absolute;top:0;left:56px;right:56px;height:80px;display:flex;align-items:center;justify-content:space-between">
+      <a href="#1a" style="display:flex;align-items:center;gap:8px;font:400 18px/1 var(--font-en);letter-spacing:-.01em">yuyadesign<span style="width:6px;height:6px;border-radius:50%;background:var(--color-accent)"></span></a>
+      <nav style="display:flex;gap:32px;font:400 13px/1 var(--font-en);letter-spacing:.12em">
+        <a href="#1a" style="padding-bottom:4px;border-bottom:1px solid var(--color-text)">ABOUT</a><a href="#1a" style="padding-bottom:4px">SERVICES</a><a href="#1a" style="padding-bottom:4px">BLOG</a><a href="#1a" style="padding-bottom:4px">CONTACT</a>
+      </nav>
+    </div>
+    <h1 style="position:absolute;left:56px;bottom:168px;margin:0;font:700 160px/.9 var(--font-display);letter-spacing:-.03em;text-transform:uppercase">Design<br>that delivers.</h1>
+    <div style="position:absolute;left:56px;right:56px;bottom:0;height:120px;display:flex;align-items:center;justify-content:space-between">
+      <p style="margin:0;font:400 14px/1.8 var(--font-ja);letter-spacing:.08em;color:var(--color-text)">デザインで、伝わるを変える。</p>
+      <div style="display:flex;align-items:center;gap:16px">
+        <span style="writing-mode:vertical-rl;font:400 12px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted)">Scroll</span>
+        <button aria-label="背景動画を一時停止" style="width:44px;height:44px;display:grid;place-items:center;background:none;border:none;padding:0;cursor:pointer"><span style="width:24px;height:24px;border-radius:50%;border:1px solid var(--color-text);display:grid;place-items:center;color:var(--color-text);font:400 8px/1 var(--font-en);box-sizing:border-box">❚❚</span></button>
+      </div>
+    </div>
+  </header>
+
+  <section style="padding:128px 56px;display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px">
+    <div style="grid-column:1 / 4;display:flex;flex-direction:column;gap:8px">
+      <span style="font:400 13px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted)">( About )</span>
+      <span style="font:400 13px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted)">01 // 03</span>
+    </div>
+    <div style="grid-column:4 / 13">
+      <h2 style="margin:0;font:400 64px/1.35 var(--font-ja-serif);letter-spacing:.04em;text-wrap:balance;word-break:keep-all">整えるだけでは、<br>届かない。</h2>
+      <p style="margin:48px 0 0;max-width:560px;font:400 16px/1.9 var(--font-ja);color:var(--color-text-muted);word-break:keep-all;text-wrap:pretty">届けたい人に届く形をつくる。ビジネスの課題に向き合う、デザインパートナーです。</p>
+      <a href="#1a" style="margin-top:48px;display:inline-flex;gap:8px;font:400 14px/1 var(--font-ja);text-decoration:underline;text-underline-offset:.3em">私たちについて →</a>
+    </div>
+  </section>
+
+  <section style="padding:0 56px 128px">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;padding-bottom:32px">
+      <h2 style="margin:0;font:400 13px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted)">( Services )</h2>
+      <span style="font:400 13px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted)">02 // 03</span>
+    </div>
+    <sc-for list="{{ services }}" as="s" hint-placeholder-count="4">
+      <a href="#1a" style="display:grid;grid-template-columns:120px 1fr 240px 40px;align-items:center;padding:40px 0;border-top:1px solid var(--color-border);transition:opacity 200ms ease" style-hover="opacity:.7">
+        <span style="font:400 13px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted)">{{ s.no }}</span>
+        <span style="font:300 64px/1 var(--font-en);letter-spacing:-.02em;text-transform:uppercase">{{ s.en }}</span>
+        <span style="font:400 14px/1 var(--font-ja);letter-spacing:.2em;color:var(--color-text-muted)">{{ s.ja }}</span>
+        <span style="font:300 24px/1 var(--font-en);text-align:right">↗</span>
+      </a>
+    </sc-for>
+    <div style="border-top:1px solid var(--color-border)"></div>
+  </section>
+</div>
+</div>
+
+<!-- ============ 1b 情報に忠実 ============ -->
+<div class="dv-opt" id="1b">
+<div class="dv-olabel"><a class="dv-oid" href="#1b">1b</a>情報に忠実 — CONTENTS.md の全項目を掲載（未記入欄は仮テキスト）</div>
+<div class="dv-card" style="width:1440px;color:var(--color-text);font-family:var(--font-ja)">
+  <header style="position:relative;height:900px;overflow:hidden;background:repeating-linear-gradient(135deg,var(--color-surface-raised) 0 14px,var(--color-surface) 14px 28px)">
+    <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.7) 0%,rgba(0,0,0,.45) 60%)"></div>
+    <div style="position:absolute;top:44%;right:200px;font:400 12px/1 ui-monospace,Menlo,monospace;color:var(--color-text-muted);letter-spacing:.1em">hero photo — 打ち合わせ／制作シーン</div>
+    <div style="position:absolute;top:0;left:0;right:0;height:80px;padding:0 56px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--color-border)">
+      <a href="#1b" style="display:flex;align-items:center;gap:8px;font:400 18px/1 var(--font-en)">yuyadesign<span style="width:6px;height:6px;border-radius:50%;background:var(--color-accent)"></span></a>
+      <div style="display:flex;align-items:center;gap:40px">
+        <nav style="display:flex;gap:32px;font:400 13px/1 var(--font-en);letter-spacing:.12em">
+          <a href="#1b" style="padding-bottom:4px;border-bottom:1px solid var(--color-accent)">HOME</a><a href="#1b" style="padding-bottom:4px">ABOUT</a><a href="#1b" style="padding-bottom:4px">SERVICES</a><a href="#1b" style="padding-bottom:4px">BLOG</a><a href="#1b" style="padding-bottom:4px">CONTACT</a>
+        </nav>
+      </div>
+    </div>
+    <div style="position:absolute;left:56px;bottom:136px;max-width:900px;display:flex;flex-direction:column;gap:32px">
+      <div style="display:flex;align-items:center;gap:8px;font:400 13px/1 var(--font-ja);letter-spacing:.12em;color:var(--color-text)"><span style="width:6px;height:6px;border-radius:50%;background:var(--color-accent)"></span>デザイン依頼 受付中</div>
+      <h1 style="margin:0;font:400 88px/1.2 var(--font-ja);letter-spacing:.02em;word-break:keep-all;text-wrap:balance">デザインで、<br>伝わるを変える。</h1>
+      <p style="margin:0;max-width:640px;font:400 17px/1.9 var(--font-ja);letter-spacing:.04em;word-break:keep-all;text-wrap:pretty">見た目を整えるだけではなく、届けたい人に届く形をつくる。私たちは、ビジネスの課題に向き合うデザインパートナーです。</p>
+      <div style="display:flex;gap:16px;margin-top:8px">
+        <a href="#1b" style="padding:12px 20px;border-radius:2px;background:rgba(255,255,255,.10);backdrop-filter:blur(8px);font:400 14px/1.6 var(--font-ja);transition:background 200ms ease" style-hover="background:rgba(255,255,255,.18);opacity:1">サービスを見る →</a>
+        <a href="#1b" style="padding:12px 20px;border-radius:2px;background:rgba(255,255,255,.10);backdrop-filter:blur(8px);font:400 14px/1.6 var(--font-ja);transition:background 200ms ease" style-hover="background:rgba(255,255,255,.18);opacity:1">お問い合わせ →</a>
+      </div>
+    </div>
+    <div style="position:absolute;right:56px;bottom:56px;display:flex;align-items:center;gap:16px">
+      <span style="writing-mode:vertical-rl;font:400 12px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted)">Scroll</span>
+      <span style="width:24px;height:24px;border-radius:50%;border:1px solid var(--color-text);box-sizing:border-box"></span>
+    </div>
+  </header>
+
+  <section style="padding:128px 56px;display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;background:var(--color-bg-light);color:var(--color-text-on-light)">
+    <div style="grid-column:1 / 6;display:flex;flex-direction:column;gap:16px">
+      <span style="font:400 13px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted-on-light)">( About )</span>
+      <h2 style="margin:0;font:400 40px/1.2 var(--font-ja);letter-spacing:.04em">私たちについて</h2>
+    </div>
+    <div style="grid-column:6 / 13;max-width:680px;display:flex;flex-direction:column;gap:24px;font:400 16px/1.9 var(--font-ja);letter-spacing:.04em;word-break:keep-all;text-wrap:pretty">
+      <p style="margin:0">良いものをつくっているのに、伝わらない。多くの企業が抱えるこの課題は、見た目の問題ではなく「誰に・何を・どう届けるか」という設計の問題だと、私たちは考えています。</p>
+      <p style="margin:0">yuyadesignは、ブランドやサービスの本質を整理し、届けたい人に届く形へと翻訳するデザイン会社です。戦略の整理からWebサイト、グラフィック、公開後の改善まで一貫して伴走します。</p>
+      <p style="margin:0">目指すのは、つくって終わりではなく成果につながるデザイン。ビジネスの課題に向き合うパートナーとして、伝わるを変えていきます。</p>
+    </div>
+  </section>
+
+  <section style="padding:96px 56px;background:var(--color-bg-alt)">
+    <div style="display:flex;flex-direction:column;gap:16px;padding-bottom:64px">
+      <span style="font:400 13px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted)">( For Companies )</span>
+      <h2 style="margin:0;font:400 40px/1.2 var(--font-ja);letter-spacing:.04em">企業様向けサービス</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px">
+      <sc-for list="{{ services }}" as="s" hint-placeholder-count="4">
+        <a href="#1b" style="display:flex;flex-direction:column;height:100%;min-width:0">
+          <div style="aspect-ratio:16/10;background:var(--color-surface-raised);border:1px solid var(--color-border);display:grid;place-items:center;font:400 12px/1 ui-monospace,Menlo,monospace;color:var(--color-text-muted)">service image</div>
+          <span style="margin-top:32px;display:flex;align-items:center;gap:8px;font:400 12px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted)"><span style="width:6px;height:6px;border-radius:50%;background:var(--color-accent)"></span>{{ s.no }} — {{ s.en }}</span>
+          <h3 style="margin:8px 0 0;font:700 18px/1.5 var(--font-ja);letter-spacing:.04em">{{ s.ja }}</h3>
+          <p style="margin:16px 0 0;min-height:5.4em;font:400 14px/1.8 var(--font-ja);color:var(--color-text-muted);letter-spacing:.04em;word-break:normal;line-break:strict;overflow-wrap:anywhere;text-wrap:pretty">{{ s.body }}</p>
+          <span style="margin-top:auto;padding-top:24px;align-self:flex-end;font:300 20px/1 var(--font-en)">↗</span>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+  <section style="padding:96px 56px;background:var(--color-bg)">
+    <div style="display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;padding-bottom:64px">
+      <div style="grid-column:1 / 6;display:flex;flex-direction:column;gap:16px">
+        <span style="font:400 13px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted)">( For Individuals )</span>
+        <h2 style="margin:0;font:400 40px/1.2 var(--font-ja);letter-spacing:.04em">個人のお客様向けサービス</h2>
+      </div>
+      <p style="grid-column:7 / 13;align-self:end;margin:0;max-width:560px;font:400 16px/1.9 var(--font-ja);letter-spacing:.04em;color:var(--color-text-muted);word-break:keep-all;text-wrap:pretty">フリーランスや個人事業主の方にも、企業案件と同じ品質でお応えします。</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:24px">
+      <sc-for list="{{ personal }}" as="s" hint-placeholder-count="2">
+        <a href="#1b" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;padding-top:32px;border-top:1px solid var(--color-border)">
+          <div style="aspect-ratio:16/10;background:var(--color-surface-raised);border:1px solid var(--color-border);display:grid;place-items:center;font:400 12px/1 ui-monospace,Menlo,monospace;color:var(--color-text-muted)">service image</div>
+          <div style="display:flex;flex-direction:column">
+            <span style="display:flex;align-items:center;gap:8px;font:400 12px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted)"><span style="width:6px;height:6px;border-radius:50%;background:var(--color-accent)"></span>{{ s.no }} — {{ s.en }}</span>
+            <h3 style="margin:8px 0 0;font:700 18px/1.5 var(--font-ja);letter-spacing:.04em">{{ s.ja }}</h3>
+            <p style="margin:16px 0 0;font:400 14px/1.8 var(--font-ja);color:var(--color-text-muted);letter-spacing:.04em;word-break:normal;line-break:strict;overflow-wrap:anywhere;text-wrap:pretty">{{ s.body }}</p>
+            <span style="margin-top:auto;padding-top:24px;align-self:flex-end;font:300 20px/1 var(--font-en)">↗</span>
+          </div>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding:96px 56px;background:var(--color-bg-light);color:var(--color-text-on-light)">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;padding-bottom:64px">
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <span style="font:400 13px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted-on-light)">( Blog )</span>
+        <h2 style="margin:0;font:400 40px/1.2 var(--font-en);letter-spacing:-.01em">Media</h2>
+      </div>
+      <a href="#1b" style="color:var(--color-text-on-light);font:400 14px/1 var(--font-ja);text-decoration:underline;text-underline-offset:.3em">ブログ一覧 →</a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+      <sc-for list="{{ media }}" as="m" hint-placeholder-count="3">
+        <a href="#1b" target="_blank" rel="noopener" style="display:flex;flex-direction:column;color:var(--color-text-on-light)">
+          <div style="aspect-ratio:16/10;background:var(--color-bg-light);border:1px solid var(--color-border-on-light);display:grid;place-items:center;font:400 12px/1 ui-monospace,Menlo,monospace;color:var(--color-text-muted-on-light);background-image:repeating-linear-gradient(135deg,rgba(0,0,0,.04) 0 14px,transparent 14px 28px)">media image</div>
+          <span style="margin-top:32px;font:400 12px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted-on-light)">{{ m.no }} — {{ m.tag }}</span>
+          <h3 style="margin:8px 0 0;font:700 18px/1.5 var(--font-ja);letter-spacing:.04em">{{ m.name }}</h3>
+          <p style="margin:16px 0 0;min-height:3.6em;font:400 14px/1.8 var(--font-ja);color:var(--color-text-muted-on-light);letter-spacing:.04em;word-break:normal;line-break:strict;overflow-wrap:anywhere;text-wrap:pretty">{{ m.body }}</p>
+          <span style="margin-top:auto;padding-top:24px;align-self:flex-end;font:300 20px/1 var(--font-en)">↗</span>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding:128px 56px;background:var(--color-bg);display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;align-items:end">
+    <div style="grid-column:1 / 9;display:flex;flex-direction:column;gap:24px">
+      <span style="font:400 13px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted)">( Contact )</span>
+      <h2 style="margin:0;font:400 72px/1.2 var(--font-ja);letter-spacing:.02em;word-break:keep-all">お問い合わせはこちら</h2>
+      <p style="margin:0;max-width:560px;font:400 16px/1.9 var(--font-ja);letter-spacing:.04em;color:var(--color-text-muted);word-break:keep-all;text-wrap:pretty">デザインのご依頼、お見積もり、ちょっとしたご相談まで、お気軽にお問い合わせください。</p>
+    </div>
+    <div style="grid-column:9 / 13;display:flex;flex-direction:column;gap:16px;align-items:flex-start">
+      <div style="display:flex;align-items:center;gap:8px;font:400 13px/1 var(--font-ja);letter-spacing:.12em"><span style="width:6px;height:6px;border-radius:50%;background:var(--color-accent)"></span>デザイン依頼 受付中</div>
+      <a href="#1b" style="width:100%;box-sizing:border-box;display:flex;justify-content:space-between;align-items:center;padding:20px 24px;border-radius:2px;background:rgba(255,255,255,.10);backdrop-filter:blur(8px);font:400 13px/1 var(--font-en);letter-spacing:.12em;transition:background 200ms ease" style-hover="background:rgba(255,255,255,.18);opacity:1">CONTACT<span>→</span></a>
+    </div>
+  </section>
+
+  <footer style="background:var(--color-surface);padding:96px 56px 0">
+    <div style="display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px;padding-bottom:96px">
+      <div style="grid-column:1 / 7;display:flex;flex-direction:column;justify-content:space-between;gap:64px">
+        <a href="#1b" style="display:flex;align-items:center;gap:8px;font:400 18px/1 var(--font-en)">yuyadesign<span style="width:6px;height:6px;border-radius:50%;background:var(--color-accent)"></span></a>
+        <p style="margin:0;font:400 64px/1.2 var(--font-ja);letter-spacing:.02em;word-break:keep-all">デザインで、<br>伝わるを変える。</p>
+      </div>
+      <div style="grid-column:8 / 10;display:flex;flex-direction:column;gap:24px">
+        <span style="font:400 12px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted)">( Menu )</span>
+        <nav style="display:flex;flex-direction:column;gap:20px;font:400 14px/1 var(--font-en);letter-spacing:.12em">
+          <a href="#1b">HOME</a><a href="#1b">ABOUT</a><a href="#1b">SERVICES</a><a href="#1b">BLOG</a><a href="#1b">CONTACT</a>
+        </nav>
+      </div>
+      <div style="grid-column:10 / 13;display:flex;flex-direction:column;gap:24px">
+        <span style="font:400 12px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted)">( Follow )</span>
+        <nav style="display:flex;flex-direction:column;gap:20px;font:400 14px/1 var(--font-en);letter-spacing:.04em">
+          <a href="#1b" target="_blank" rel="noopener">X（Twitter） ↗</a><a href="#1b" target="_blank" rel="noopener">YouTube ↗</a><a href="#1b" target="_blank" rel="noopener">TikTok ↗</a>
+        </nav>
+        <span style="margin-top:24px;font:400 12px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted)">( Company )</span>
+        <p style="margin:0;font:400 14px/1.8 var(--font-ja);color:var(--color-text-muted)">運営：yuyadesign</p>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:24px 0;border-top:1px solid var(--color-border);font:400 13px/1 var(--font-ja);color:var(--color-text-muted)">
+      <span style="font-family:var(--font-en)">© yuyadesign</span>
+      <div style="display:flex;gap:32px">
+        <a href="#1b" style="color:var(--color-text-muted)">プライバシーポリシー</a><a href="#1b" style="color:var(--color-text-muted)">特定商取引法に基づく表示</a>
+      </div>
+    </div>
+  </footer>
+</div>
+</div>
+
+<!-- ============ 1c 中間 ============ -->
+<div class="dv-opt" id="1c">
+<div class="dv-olabel"><a class="dv-oid" href="#1c">1c</a>中間 — 巨大ワードマーク＋日本語コピーは原文、本文は要約</div>
+<div class="dv-card" style="width:1440px;color:var(--color-text);font-family:var(--font-ja)">
+  <header style="position:relative;height:900px;overflow:hidden;background:repeating-linear-gradient(135deg,var(--color-surface-raised) 0 14px,var(--color-surface) 14px 28px)">
+    <div style="position:absolute;inset:0;background:var(--color-overlay)"></div>
+    <div style="position:absolute;top:120px;right:80px;font:400 12px/1 ui-monospace,Menlo,monospace;color:var(--color-text-muted);letter-spacing:.1em">hero video — モノクロ・低彩度</div>
+    <div style="position:absolute;top:0;left:0;right:0;height:80px;padding:0 56px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--color-border)">
+      <div style="display:flex;align-items:center;gap:8px;font:400 13px/1 var(--font-en);letter-spacing:.12em"><span style="width:6px;height:6px;border-radius:50%;background:var(--color-accent)"></span>OPEN FOR PROJECTS</div>
+      <nav style="display:flex;gap:32px;font:400 13px/1 var(--font-en);letter-spacing:.12em">
+        <a href="#1c" style="padding-bottom:4px;border-bottom:1px solid var(--color-text)">HOME</a><a href="#1c" style="padding-bottom:4px">ABOUT</a><a href="#1c" style="padding-bottom:4px">SERVICES</a><a href="#1c" style="padding-bottom:4px">BLOG</a><a href="#1c" style="padding-bottom:4px">CONTACT</a>
+      </nav>
+    </div>
+    <div style="position:absolute;left:56px;right:56px;top:176px;display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px">
+      <h1 style="grid-column:1 / 7;margin:0;font:400 56px/1.4 var(--font-ja-serif);letter-spacing:.06em;word-break:keep-all">デザインで、<br>伝わるを変える。</h1>
+      <p style="grid-column:9 / 13;align-self:end;margin:0;font:400 15px/1.9 var(--font-ja);letter-spacing:.04em;word-break:keep-all;text-wrap:pretty">見た目を整えるだけではなく、届けたい人に届く形をつくる。私たちは、ビジネスの課題に向き合うデザインパートナーです。</p>
+    </div>
+    <div style="position:absolute;left:56px;right:56px;bottom:112px;border-top:1px solid var(--color-border)"></div>
+    <div style="position:absolute;left:52px;bottom:120px;font:700 208px/.78 var(--font-display);letter-spacing:-.045em;text-transform:uppercase;white-space:nowrap">yuyadesign</div>
+    <div style="position:absolute;left:56px;right:56px;bottom:0;height:112px;display:flex;align-items:center;justify-content:space-between">
+      <span style="font:400 13px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted)">( Design Partner for Business )</span>
+      <div style="display:flex;align-items:center;gap:16px">
+        <span style="writing-mode:vertical-rl;font:400 12px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted)">Scroll</span>
+        <span style="width:24px;height:24px;border-radius:50%;border:1px solid var(--color-text);box-sizing:border-box"></span>
+      </div>
+    </div>
+  </header>
+
+  <section style="background:var(--color-bg-light);color:var(--color-text-on-light);padding:128px 56px">
+    <div style="display:grid;grid-template-columns:repeat(12,1fr);column-gap:24px">
+      <div style="grid-column:1 / 5;display:flex;flex-direction:column;gap:16px">
+        <span style="font:400 13px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted-on-light)">( About ) — 01 // 03</span>
+        <h2 style="margin:0;font:400 40px/1.2 var(--font-ja);letter-spacing:.04em">私たちについて</h2>
+      </div>
+      <div style="grid-column:6 / 13;max-width:680px;display:flex;flex-direction:column;gap:24px">
+        <p style="margin:0;font:400 24px/1.8 var(--font-ja-serif);letter-spacing:.08em;word-break:keep-all;text-wrap:pretty">良いものが、正しく伝わっていない。<br>その課題は、見た目ではなく設計にあります。</p>
+        <p style="margin:0;font:400 16px/1.9 var(--font-ja);letter-spacing:.04em;word-break:keep-all;text-wrap:pretty">yuyadesignは、ブランドやサービスの本質を整理し、届けたい人に届く形へ翻訳するデザイン会社です。戦略から制作、公開後の改善まで一貫して伴走します。</p>
+      </div>
+    </div>
+    <div style="margin-top:96px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+      <sc-for list="{{ strengths }}" as="st" hint-placeholder-count="3">
+        <div style="border-top:1px solid var(--color-border-on-light);padding-top:32px;display:flex;flex-direction:column;gap:16px">
+          <span style="font:400 13px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted-on-light)">{{ st.no }}</span>
+          <span style="font:300 24px/1 var(--font-en);letter-spacing:-.01em">{{ st.key }}</span>
+          <h3 style="margin:8px 0 0;font:700 18px/1.5 var(--font-ja)">{{ st.ja }}</h3>
+          <p style="margin:0;max-width:360px;font:400 14px/1.8 var(--font-ja);word-break:keep-all;text-wrap:pretty">{{ st.body }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="padding:128px 56px">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;padding-bottom:48px">
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <span style="font:400 13px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted)">( For Companies ) — 02 // 03</span>
+        <h2 style="margin:0;font:400 40px/1.2 var(--font-ja);letter-spacing:.04em">企業様向けサービス</h2>
+      </div>
+      <a href="#1c" style="font:400 14px/1 var(--font-ja);text-decoration:underline;text-underline-offset:.3em">すべてのサービス →</a>
+    </div>
+    <sc-for list="{{ services }}" as="s" hint-placeholder-count="4">
+      <a href="#1c" style="display:grid;grid-template-columns:80px 360px 1fr 200px 40px;column-gap:24px;align-items:center;padding:32px 0;border-top:1px solid var(--color-border)" style-hover="opacity:.7">
+        <span style="font:400 13px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted)">{{ s.no }}</span>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <span style="font:400 12px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted);text-transform:uppercase">{{ s.en }}</span>
+          <h3 style="margin:0;font:400 28px/1.3 var(--font-ja);letter-spacing:.04em">{{ s.ja }}</h3>
+        </div>
+        <p style="margin:0;max-width:480px;font:400 14px/1.8 var(--font-ja);color:var(--color-text-muted);letter-spacing:.04em;word-break:normal;line-break:strict;overflow-wrap:anywhere;text-wrap:pretty">{{ s.body }}</p>
+        <div style="aspect-ratio:16/10;background:var(--color-surface-raised);border:1px solid var(--color-border);display:grid;place-items:center;font:400 12px/1 ui-monospace,Menlo,monospace;color:var(--color-text-muted)">image</div>
+        <span style="font:300 24px/1 var(--font-en);text-align:right">↗</span>
+      </a>
+    </sc-for>
+    <div style="border-top:1px solid var(--color-border)"></div>
+  </section>
+</div>
+</div>
+
+</div>
+<p class="dv-next">次の例: 「<a class="dv-oid" href="#1c">1c</a> で下半分も作って」 · 「<a class="dv-oid" href="#1a">1a</a> のHEROに <a class="dv-oid" href="#1b">1b</a> のABOUT本文を入れて」 · 「<a class="dv-oid" href="#1b">1b</a> のサービスを縦リストに」</p>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showGrid&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      showGrid: this.props.showGrid ?? true,
+      services: [
+        { no: '01', en: 'Branding', ja: 'ブランディング', body: '理念や強みを言語化し、ロゴ・トーン・ガイドラインまで一貫したブランドの形をつくります。' },
+        { no: '02', en: 'Website', ja: 'Webサイト制作', body: '情報設計からデザイン、実装まで。届けたい相手に伝わるコーポレートサイトを制作します。' },
+        { no: '03', en: 'Graphic', ja: 'グラフィックデザイン', body: '会社案内、パンフレット、広告など、目的に合わせた紙・デジタルのツールをデザインします。' },
+        { no: '04', en: 'Growth', ja: '運用・改善サポート', body: '公開後の効果を検証し、更新や改善を継続的にサポート。つくって終わりにしません。' }
+      ],
+      personal: [
+        { no: '01', en: 'Logo & Card', ja: 'ロゴ・名刺制作', body: '活動の顔となるロゴと名刺を、あなたらしさが伝わる形でデザインします。' },
+        { no: '02', en: 'Portfolio', ja: 'ポートフォリオサイト制作', body: '実績や人柄がひと目で伝わる、個人のためのWebサイトを制作します。' }
+      ],
+      media: [
+        { no: '01', tag: 'Note', name: 'デザインの考え方', body: '制作の裏側や、伝わるデザインの考え方を発信しています。' },
+        { no: '02', tag: 'YouTube', name: 'デザイン解説チャンネル', body: '実際の制作プロセスを動画でわかりやすく解説しています。' },
+        { no: '03', tag: 'Blog', name: '制作事例レポート', body: 'プロジェクトの課題から成果までを事例として紹介しています。' }
+      ],
+      strengths: [
+        { no: '01', key: 'Strategy', ja: '課題から始める', body: 'デザインの前に、事業の目的と届けたい相手を整理します。' },
+        { no: '02', key: 'Craft', ja: '伝わる形にする', body: '整理した本質を、見た目と言葉の両面から形にします。' },
+        { no: '03', key: 'Partnership', ja: '公開後も伴走する', body: '成果を確かめながら、改善を重ねていきます。' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

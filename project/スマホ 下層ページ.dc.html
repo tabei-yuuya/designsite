@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@700&amp;family=Geist:wght@300;400&amp;family=Noto+Sans+JP:wght@400;700&amp;family=Shippori+Mincho:wght@400&amp;display=swap">
+<style>
+:root{--color-bg:#0F1012;--color-surface:#1A1B1D;--color-surface-raised:#232324;--color-bg-alt:#2C2C2D;--color-text:#F2F2F0;--color-text-muted:#9C9C9A;--color-border:rgba(255,255,255,0.16);--color-overlay:rgba(0,0,0,0.45);--color-bg-light:#EEEFF0;--color-text-on-light:#4A463F;--color-text-muted-on-light:#66665F;--color-border-on-light:rgba(0,0,0,0.14);--color-accent:#A6D43A;--font-ja:"Noto Sans JP","Hiragino Sans",sans-serif;--font-ja-serif:"Shippori Mincho","Noto Serif JP",serif;--font-en:"Geist","Helvetica Neue",Helvetica,Arial,sans-serif;--font-display:"Archivo","Helvetica Neue",sans-serif}
+body{margin:0;background:#e9e8e4;font-family:var(--font-ja);-webkit-font-smoothing:antialiased}
+a{color:var(--color-text);text-decoration:none}a:hover{opacity:.7}
+input,textarea,button{font-family:inherit}
+:focus-visible{outline:2px solid var(--color-accent);outline-offset:3px}
+.dv-turn{padding:40px 44px 48px}.dv-thd{display:flex;align-items:baseline;gap:10px;margin:0 0 24px}.dv-tid{font:600 10px ui-monospace,Menlo,monospace;padding:3px 7px;background:#1a1a1a;color:#fff;border-radius:4px}.dv-tname{font:600 13px/1.2 system-ui,sans-serif;color:#1a1a1a}.dv-opts{display:flex;flex-wrap:wrap;gap:48px 40px;align-items:flex-start}.dv-opt{flex:none;display:flex;flex-direction:column;gap:10px;scroll-margin-top:16px}.dv-oid{font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);color:#1a1a1a;border-radius:5px}.dv-olabel{display:flex;align-items:baseline;gap:8px;font:400 12px/1.4 system-ui,sans-serif;color:rgba(0,0,0,.6)}.dv-card{background:#0F1012;box-shadow:0 1px 3px rgba(0,0,0,.08);overflow:hidden}.dv-next{margin:28px 0 0;font:12px/1.5 system-ui,sans-serif;color:rgba(0,0,0,.5)}
+</style>
+</helmet>
+<section class="dv-turn" id="t4">
+<div class="dv-thd"><a class="dv-tid" href="#t4">4</a><span class="dv-tname">スマホ 下層ページ（PC版 2a〜2g に対応）— 390px</span></div>
+<div class="dv-opts">
+
+<div class="dv-opt" id="4a">
+<div class="dv-olabel"><a class="dv-oid" href="#4a">4a</a>ABOUT</div>
+<div class="dv-card" style="width:390px;color:var(--color-text)">
+  <dc-import name="SpHeader" hint-size="100%,72px"></dc-import>
+  <dc-import name="SpPageHero" en="About" ja="私たちについて" crumb="HOME / ABOUT" lead="見た目を整えるだけではなく、届けたい人に届く形をつくる。私たちは、ビジネスの課題に向き合うデザインパートナーです。" hint-size="100%,380px"></dc-import>
+  <div style="height:240px;position:relative;background:repeating-linear-gradient(135deg,var(--color-surface-raised) 0 12px,var(--color-surface) 12px 24px)">
+    <div style="position:absolute;inset:0;background:var(--color-overlay)"></div>
+    <span style="position:absolute;top:16px;right:20px;font:400 12px/1 ui-monospace,Menlo,monospace;color:var(--color-text-muted)">about photo</span>
+  </div>
+  <section style="padding:96px 20px;display:flex;flex-direction:column;gap:32px">
+    <span style="font:400 13px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted)">( Mission ) — 01 // 03</span>
+    <h2 style="margin:0;font:400 36px/1.4 var(--font-ja-serif);letter-spacing:.06em;word-break:keep-all">伝わるを、<br>変える。</h2>
+    <div style="display:flex;flex-direction:column;gap:20px;font:400 15px/1.9 var(--font-ja);letter-spacing:.04em;line-break:strict;text-wrap:pretty">
+      <p style="margin:0">良いものをつくっているのに、伝わらない。多くの企業が抱えるこの課題は、見た目の問題ではなく「誰に・何を・どう届けるか」という設計の問題だと、私たちは考えています。</p>
+      <p style="margin:0">yuyadesignは、ブランドやサービスの本質を整理し、届けたい人に届く形へと翻訳するデザイン会社です。戦略の整理からWebサイト、グラフィック、公開後の改善まで一貫して伴走します。</p>
+      <p style="margin:0">目指すのは、つくって終わりではなく成果につながるデザイン。ビジネスの課題に向き合うパートナーとして、伝わるを変えていきます。</p>
+    </div>
+  </section>
+  <section style="padding:96px 20px;background:var(--color-bg-light);color:var(--color-text-on-light);display:flex;flex-direction:column;gap:40px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font:400 13px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted-on-light)">( Values ) — 02 // 03</span>
+      <h2 style="margin:0;font:400 28px/1.3 var(--font-ja);letter-spacing:.04em">大切にしていること</h2>
+    </div>
+    <sc-for list="{{ strengths }}" as="st" hint-placeholder-count="3">
+      <div style="border-top:1px solid var(--color-border-on-light);padding-top:24px;display:flex;flex-direction:column;gap:12px">
+        <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font:300 24px/1 var(--font-en)">{{ st.key }}</span><span style="font:400 13px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted-on-light)">{{ st.no }}</span></div>
+        <h3 style="margin:4px 0 0;font:700 17px/1.5 var(--font-ja)">{{ st.ja }}</h3>
+        <p style="margin:0;font:400 14px/1.8 var(--font-ja);letter-spacing:.04em;line-break:strict">{{ st.body }}</p>
+      </div>
+    </sc-for>
+  </section>
+  <section style="padding:96px 20px;display:flex;flex-direction:column;gap:32px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font:400 13px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted)">( Company ) — 03 // 03</span>
+      <h2 style="margin:0;font:400 28px/1.3 var(--font-ja);letter-spacing:.04em">会社概要</h2>
+    </div>
+    <dl style="margin:0">
+      <sc-for list="{{ company }}" as="c" hint-placeholder-count="6">
+        <div style="display:flex;flex-direction:column;gap:4px;padding:16px 0;border-top:1px solid var(--color-border);font:400 14px/1.8 var(--font-ja);letter-spacing:.04em">
+          <dt style="font-size:12px;color:var(--color-text-muted)">{{ c.k }}</dt><dd style="margin:0">{{ c.v }}</dd>
+        </div>
+      </sc-for>
+      <div style="border-top:1px solid var(--color-border)"></div>
+    </dl>
+  </section>
+  <dc-import name="SpFooter" hint-size="100%,1200px"></dc-import>
+</div>
+</div>
+
+<div class="dv-opt" id="4b">
+<div class="dv-olabel"><a class="dv-oid" href="#4b">4b</a>SERVICES</div>
+<div class="dv-card" style="width:390px;color:var(--color-text)">
+  <dc-import name="SpHeader" hint-size="100%,72px"></dc-import>
+  <dc-import name="SpPageHero" en="Services" ja="サービス" crumb="HOME / SERVICES" lead="企業様・個人のお客様それぞれの課題に合わせて、戦略から制作、公開後の改善までご提供します。" hint-size="100%,380px"></dc-import>
+  <div style="padding:0 20px;display:flex;gap:24px;border-bottom:1px solid var(--color-border);font:400 14px/1 var(--font-ja);letter-spacing:.08em">
+    <a href="#4b" style="padding:18px 0;border-bottom:1px solid var(--color-accent);margin-bottom:-1px">企業様向け</a>
+    <a href="#4b" style="padding:18px 0;color:var(--color-text-muted)">個人のお客様向け</a>
+  </div>
+  <section style="padding:96px 20px;background:var(--color-bg-alt);display:flex;flex-direction:column;gap:48px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font:400 13px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted)">( For Companies )</span>
+      <h2 style="margin:0;font:400 28px/1.3 var(--font-ja);letter-spacing:.04em">企業様向けサービス</h2>
+    </div>
+    <sc-for list="{{ services }}" as="s" hint-placeholder-count="4">
+      <a href="#4c" style="display:flex;flex-direction:column;padding-top:24px;border-top:1px solid var(--color-border)">
+        <div style="aspect-ratio:16/10;background:var(--color-surface-raised);border:1px solid var(--color-border);display:grid;place-items:center;font:400 12px/1 ui-monospace,Menlo,monospace;color:var(--color-text-muted)">service image</div>
+        <span style="margin-top:24px;display:flex;align-items:center;gap:8px;font:400 12px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted)"><span style="width:6px;height:6px;border-radius:50%;background:var(--color-accent)"></span>{{ s.no }} — {{ s.en }}</span>
+        <h3 style="margin:8px 0 0;font:400 24px/1.4 var(--font-ja);letter-spacing:.04em">{{ s.ja }}</h3>
+        <p style="margin:12px 0 0;font:400 14px/1.8 var(--font-ja);letter-spacing:.04em;color:var(--color-text-muted);line-break:strict">{{ s.body }}</p>
+        <span style="margin-top:20px;font:400 14px/1 var(--font-ja);text-decoration:underline;text-underline-offset:.3em">詳しく見る →</span>
+      </a>
+    </sc-for>
+  </section>
+  <section style="padding:96px 20px 64px;display:flex;flex-direction:column;gap:48px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font:400 13px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted)">( For Individuals )</span>
+      <h2 style="margin:0;font:400 28px/1.3 var(--font-ja);letter-spacing:.04em">個人のお客様向けサービス</h2>
+    </div>
+    <sc-for list="{{ personal }}" as="s" hint-placeholder-count="2">
+      <a href="#4c" style="display:flex;flex-direction:column;padding-top:24px;border-top:1px solid var(--color-border)">
+        <div style="aspect-ratio:16/10;background:var(--color-surface-raised);border:1px solid var(--color-border);display:grid;place-items:center;font:400 12px/1 ui-monospace,Menlo,monospace;color:var(--color-text-muted)">service image</div>
+        <span style="margin-top:24px;display:flex;align-items:center;gap:8px;font:400 12px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted)"><span style="width:6px;height:6px;border-radius:50%;background:var(--color-accent)"></span>{{ s.no }} — {{ s.en }}</span>
+        <h3 style="margin:8px 0 0;font:700 18px/1.5 var(--font-ja);letter-spacing:.04em">{{ s.ja }}</h3>
+        <p style="margin:12px 0 0;font:400 14px/1.8 var(--font-ja);letter-spacing:.04em;color:var(--color-text-muted);line-break:strict">{{ s.body }}</p>
+      </a>
+    </sc-for>
+  </section>
+  <section style="padding:96px 20px;background:var(--color-bg-light);color:var(--color-text-on-light);display:flex;flex-direction:column;gap:32px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font:400 13px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted-on-light)">( Flow )</span>
+      <h2 style="margin:0;font:400 28px/1.3 var(--font-ja);letter-spacing:.04em">制作の流れ</h2>
+    </div>
+    <div>
+      <sc-for list="{{ steps }}" as="st" hint-placeholder-count="5">
+        <div style="display:grid;grid-template-columns:56px 1fr;padding:20px 0;border-top:1px solid var(--color-border-on-light)">
+          <span style="font:300 24px/1.2 var(--font-en)">{{ st.no }}</span>
+          <div style="display:flex;flex-direction:column;gap:4px"><span style="font:700 15px/1.6 var(--font-ja)">{{ st.title }}</span><span style="font:400 13px/1.7 var(--font-ja)">{{ st.body }}</span></div>
+        </div>
+      </sc-for>
+      <div style="border-top:1px solid var(--color-border-on-light)"></div>
+    </div>
+  </section>
+  <dc-import name="SpFooter" hint-size="100%,1200px"></dc-import>
+</div>
+</div>
+<div class="dv-opt" id="4c">
+<div class="dv-olabel"><a class="dv-oid" href="#4c">4c</a>サービス詳細</div>
+<div class="dv-card" style="width:390px;color:var(--color-text)">
+  <dc-import name="SpHeader" hint-size="100%,72px"></dc-import>
+  <dc-import name="SpPageHero" en="Branding" ja="ブランディング" crumb="HOME / SERVICES / ブランディング" lead="理念や強みを言語化し、ロゴ・トーン・ガイドラインまで一貫したブランドの形をつくります。" hint-size="100%,380px"></dc-import>
+  <div style="padding:32px 20px 0"><div style="aspect-ratio:4/3;background:repeating-linear-gradient(135deg,var(--color-surface-raised) 0 12px,var(--color-surface) 12px 24px);border:1px solid var(--color-border);display:grid;place-items:center;font:400 12px/1 ui-monospace,Menlo,monospace;color:var(--color-text-muted)">main visual</div></div>
+  <section style="padding:96px 20px;display:flex;flex-direction:column;gap:24px">
+    <span style="font:400 13px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted)">( Overview )</span>
+    <h2 style="margin:0;font:400 28px/1.5 var(--font-ja);letter-spacing:.04em;word-break:keep-all">“らしさ”を、<br>伝わる形に。</h2>
+    <p style="margin:8px 0 0;font:400 15px/1.9 var(--font-ja);letter-spacing:.04em;line-break:strict">ブランドは、ロゴや色だけで成り立つものではありません。企業の考え方や強み、お客様との約束が、あらゆる接点で一貫して伝わってはじめて形になります。</p>
+    <p style="margin:0;font:400 15px/1.9 var(--font-ja);letter-spacing:.04em;line-break:strict">ヒアリングとワークショップで本質を整理し、言葉とビジュアルの両面からブランドを設計。社内外で使い続けられるガイドラインまでご用意します。</p>
+  </section>
+  <section style="padding:96px 20px;background:var(--color-bg-light);color:var(--color-text-on-light);display:flex;flex-direction:column;gap:32px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font:400 13px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted-on-light)">( Issues )</span>
+      <h2 style="margin:0;font:400 28px/1.3 var(--font-ja);letter-spacing:.04em">こんな課題に</h2>
+    </div>
+    <div>
+      <sc-for list="{{ issues }}" as="is" hint-placeholder-count="4">
+        <div style="display:grid;grid-template-columns:40px 1fr;padding:20px 0;border-top:1px solid var(--color-border-on-light);font:400 15px/1.8 var(--font-ja);letter-spacing:.04em">
+          <span style="font:400 12px/2.2 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted-on-light)">{{ is.no }}</span><span>{{ is.text }}</span>
+        </div>
+      </sc-for>
+      <div style="border-top:1px solid var(--color-border-on-light)"></div>
+    </div>
+  </section>
+  <section style="padding:96px 20px 64px;display:flex;flex-direction:column;gap:32px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font:400 13px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted)">( Scope )</span>
+      <h2 style="margin:0;font:400 28px/1.3 var(--font-ja);letter-spacing:.04em">提供内容</h2>
+    </div>
+    <div>
+      <sc-for list="{{ scope }}" as="sc" hint-placeholder-count="6">
+        <div style="padding:20px 0;border-top:1px solid var(--color-border);display:flex;flex-direction:column;gap:4px">
+          <span style="font:700 15px/1.6 var(--font-ja)">{{ sc.title }}</span>
+          <span style="font:400 13px/1.7 var(--font-ja);color:var(--color-text-muted)">{{ sc.body }}</span>
+        </div>
+      </sc-for>
+      <div style="border-top:1px solid var(--color-border)"></div>
+    </div>
+  </section>
+  <section style="padding:32px 20px 96px;display:flex;flex-direction:column;gap:32px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font:400 13px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted)">( Price )</span>
+      <h2 style="margin:0;font:400 28px/1.3 var(--font-ja);letter-spacing:.04em">料金の目安</h2>
+    </div>
+    <div>
+      <sc-for list="{{ prices }}" as="pr" hint-placeholder-count="3">
+        <div style="padding:24px 0;border-top:1px solid var(--color-border);display:flex;flex-direction:column;gap:8px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font:700 15px/1.6 var(--font-ja)">{{ pr.plan }}</span><span style="font:300 28px/1 var(--font-en);letter-spacing:-.02em">{{ pr.price }}<span style="font-size:.5em;padding-left:4px;font-family:var(--font-ja)">万円〜</span></span></div>
+          <span style="font:400 13px/1.7 var(--font-ja);color:var(--color-text-muted)">{{ pr.note }}</span>
+        </div>
+      </sc-for>
+      <p style="margin:0;padding-top:16px;border-top:1px solid var(--color-border);font:400 12px/1.6 var(--font-ja);color:var(--color-text-muted)">※ 金額は税別の目安です。内容に応じて個別にお見積もりします。</p>
+    </div>
+  </section>
+  <section style="padding:96px 20px;background:var(--color-bg-alt);display:flex;flex-direction:column;gap:32px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font:400 13px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted)">( Other Services )</span>
+      <h2 style="margin:0;font:400 28px/1.3 var(--font-ja);letter-spacing:.04em">そのほかのサービス</h2>
+    </div>
+    <div>
+      <sc-for list="{{ otherServices }}" as="s" hint-placeholder-count="3">
+        <a href="#4c" style="display:flex;justify-content:space-between;align-items:center;min-height:44px;padding:20px 0;border-top:1px solid var(--color-border)">
+          <div style="display:flex;flex-direction:column;gap:6px"><span style="font:400 12px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted)">{{ s.no }} — {{ s.en }}</span><span style="font:700 16px/1.5 var(--font-ja)">{{ s.ja }}</span></div>
+          <span style="font:300 20px/1 var(--font-en)">→</span>
+        </a>
+      </sc-for>
+      <div style="border-top:1px solid var(--color-border)"></div>
+    </div>
+  </section>
+  <dc-import name="SpFooter" hint-size="100%,1200px"></dc-import>
+</div>
+</div>
+
+<div class="dv-opt" id="4d">
+<div class="dv-olabel"><a class="dv-oid" href="#4d">4d</a>BLOG一覧 — カテゴリ切り替え可</div>
+<div class="dv-card" style="width:390px;color:var(--color-text)">
+  <dc-import name="SpHeader" hint-size="100%,72px"></dc-import>
+  <dc-import name="SpPageHero" en="Blog" ja="ブログ" crumb="HOME / BLOG" lead="制作の裏側や、伝わるデザインの考え方、プロジェクトの事例を発信しています。" hint-size="100%,340px"></dc-import>
+  <div role="tablist" style="padding:0 20px;display:flex;gap:24px;overflow-x:auto;border-bottom:1px solid var(--color-border)">
+    <sc-for list="{{ cats }}" as="c" hint-placeholder-count="4">
+      <button role="tab" aria-selected="{{ c.selected }}" onClick="{{ c.onClick }}" style="flex:none;min-height:48px;padding:0;margin-bottom:-1px;background:none;border:none;border-bottom:1px solid {{ c.line }};color:{{ c.color }};font:400 14px/1 var(--font-ja);letter-spacing:.08em;cursor:pointer">{{ c.label }}</button>
+    </sc-for>
+  </div>
+  <section style="padding:40px 20px 96px;display:flex;flex-direction:column;gap:48px">
+    <sc-if value="{{ featured }}" hint-placeholder-val="{{ true }}">
+      <a href="#4e" style="display:flex;flex-direction:column;gap:16px">
+        <div style="aspect-ratio:16/10;background:var(--color-surface-raised);border:1px solid var(--color-border);display:grid;place-items:center;font:400 12px/1 ui-monospace,Menlo,monospace;color:var(--color-text-muted)">eyecatch</div>
+        <div style="display:flex;justify-content:space-between;font:400 12px/1 var(--font-ja);color:var(--color-text-muted)"><span>{{ featured.cat }}</span><span style="font-family:var(--font-en);letter-spacing:.08em">{{ featured.date }}</span></div>
+        <h2 style="margin:0;font:400 22px/1.6 var(--font-ja);letter-spacing:.04em;line-break:strict;text-wrap:pretty">{{ featured.title }}</h2>
+      </a>
+    </sc-if>
+    <div>
+      <sc-for list="{{ restPosts }}" as="p" hint-placeholder-count="3">
+        <a href="#4e" style="display:grid;grid-template-columns:120px minmax(0,1fr);gap:16px;padding:20px 0;border-top:1px solid var(--color-border)">
+          <div style="aspect-ratio:16/10;background:var(--color-surface-raised);border:1px solid var(--color-border)"></div>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <div style="display:flex;gap:12px;font:400 12px/1 var(--font-ja);color:var(--color-text-muted)"><span>{{ p.cat }}</span><span style="font-family:var(--font-en)">{{ p.date }}</span></div>
+            <span style="font:700 14px/1.6 var(--font-ja);letter-spacing:.02em;line-break:strict">{{ p.title }}</span>
+          </div>
+        </a>
+      </sc-for>
+    </div>
+    <sc-if value="{{ noPosts }}" hint-placeholder-val="{{ false }}"><p style="margin:0;font:400 14px/1.9 var(--font-ja);color:var(--color-text-muted)">このカテゴリの記事はまだありません。</p></sc-if>
+    <nav aria-label="ページ送り" style="display:flex;justify-content:center;gap:8px;font:400 14px/1 var(--font-en)">
+      <a href="#4d" aria-current="page" style="width:44px;height:44px;display:grid;place-items:center;border-bottom:1px solid var(--color-accent)">1</a>
+      <a href="#4d" style="width:44px;height:44px;display:grid;place-items:center;color:var(--color-text-muted)">2</a>
+      <a href="#4d" style="width:44px;height:44px;display:grid;place-items:center;color:var(--color-text-muted)">3</a>
+      <a href="#4d" aria-label="次のページ" style="width:44px;height:44px;display:grid;place-items:center">→</a>
+    </nav>
+  </section>
+  <dc-import name="SpFooter" hint-size="100%,1200px"></dc-import>
+</div>
+</div>
+<div class="dv-opt" id="4e">
+<div class="dv-olabel"><a class="dv-oid" href="#4e">4e</a>BLOG記事詳細</div>
+<div class="dv-card" style="width:390px;color:var(--color-text)">
+  <dc-import name="SpHeader" hint-size="100%,72px"></dc-import>
+  <section style="padding:24px 20px 0;display:flex;flex-direction:column;gap:20px">
+    <span style="font:400 12px/1.4 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted)">HOME / BLOG / デザイン</span>
+    <div style="margin-top:40px;display:flex;gap:16px;font:400 12px/1 var(--font-ja);color:var(--color-text-muted)"><span>デザイン</span><span style="font-family:var(--font-en);letter-spacing:.08em">2026.09.12</span></div>
+    <h1 style="margin:0;font:400 26px/1.6 var(--font-ja);letter-spacing:.04em;line-break:strict;text-wrap:pretty">「整える」と「伝わる」のあいだにあるもの。デザインを始める前に考えていること</h1>
+  </section>
+  <div style="padding:32px 20px 0"><div style="aspect-ratio:16/10;background:repeating-linear-gradient(135deg,var(--color-surface-raised) 0 12px,var(--color-surface) 12px 24px);border:1px solid var(--color-border);display:grid;place-items:center;font:400 12px/1 ui-monospace,Menlo,monospace;color:var(--color-text-muted)">eyecatch</div></div>
+  <article style="padding:56px 20px 64px;font:400 15px/2 var(--font-ja);letter-spacing:.04em;line-break:strict;text-wrap:pretty">
+    <p style="margin:0;font:400 17px/2 var(--font-ja-serif);letter-spacing:.06em">デザインの相談を受けたとき、私たちが最初に手を動かすのは画面の上ではありません。まずは、誰に何を届けたいのかを言葉にするところから始めます。</p>
+    <nav style="margin:48px 0;padding:24px 0;border-top:1px solid var(--color-border);border-bottom:1px solid var(--color-border);display:flex;flex-direction:column;font-size:14px">
+      <span style="font:400 12px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted);padding-bottom:8px">( Contents )</span>
+      <a href="#4e" style="padding:12px 0;display:flex;justify-content:space-between;gap:12px"><span>01　見た目の前に、目的を決める</span><span style="color:var(--color-text-muted)">↓</span></a><a href="#4e" style="padding:12px 0;display:flex;justify-content:space-between;gap:12px;border-top:1px solid var(--color-border)"><span>02　届けたい相手をひとりに絞る</span><span style="color:var(--color-text-muted)">↓</span></a><a href="#4e" style="padding:12px 0;display:flex;justify-content:space-between;gap:12px;border-top:1px solid var(--color-border)"><span>03　伝わったかどうかを確かめる</span><span style="color:var(--color-text-muted)">↓</span></a>
+    </nav>
+    <h2 style="margin:0 0 20px;font:400 22px/1.5 var(--font-ja)"><span style="display:block;font:400 12px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted);margin-bottom:12px">01</span>見た目の前に、目的を決める</h2>
+    <p style="margin:0 0 20px">「かっこよくしたい」「今っぽくしたい」というご要望の奥には、たいてい別の目的があります。問い合わせを増やしたい、採用で選ばれたい、価格ではなく価値で比べてほしい。その目的が決まってはじめて、デザインの良し悪しを判断する基準ができます。</p>
+    <p style="margin:0">目的が曖昧なまま進めると、完成したものが「きれいだけど成果が出ない」状態になりがちです。だからこそ最初の打ち合わせでは、見た目の話よりも事業の話を多くお聞きしています。</p>
+    <h2 style="margin:64px 0 20px;font:400 22px/1.5 var(--font-ja)"><span style="display:block;font:400 12px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted);margin-bottom:12px">02</span>届けたい相手をひとりに絞る</h2>
+    <p style="margin:0">「すべての人に届けたい」と考えるほど、メッセージはぼやけていきます。私たちは、いちばん届けたい相手をひとり思い浮かべ、その人が何に悩み、どんな言葉なら動くのかを一緒に考えます。</p>
+    <figure style="margin:40px 0">
+      <div style="aspect-ratio:16/10;background:var(--color-surface-raised);border:1px solid var(--color-border);display:grid;place-items:center;font:400 12px/1 ui-monospace,Menlo,monospace;color:var(--color-text-muted)">article image</div>
+      <figcaption style="margin-top:12px;font:400 12px/1.6 var(--font-ja);color:var(--color-text-muted)">ヒアリングでは、ターゲット像を付箋で書き出しながら整理します。</figcaption>
+    </figure>
+    <h2 style="margin:64px 0 20px;font:400 22px/1.5 var(--font-ja)"><span style="display:block;font:400 12px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted);margin-bottom:12px">03</span>伝わったかどうかを確かめる</h2>
+    <p style="margin:0 0 20px">公開はゴールではなくスタートです。問い合わせの数や内容、ページの読まれ方を見ながら、伝わっているかを確かめ、必要があれば言葉やデザインを見直します。</p>
+    <p style="margin:0">デザインで伝わるを変えるために。私たちはこれからも、見た目の手前にある問いから始めていきます。</p>
+    <div style="margin-top:56px;padding-top:24px;border-top:1px solid var(--color-border);display:flex;flex-direction:column;gap:16px">
+      <div style="display:flex;gap:12px;font:400 12px/1 var(--font-ja);color:var(--color-text-muted)"><span># デザイン</span><span># ブランディング</span></div>
+      <a href="#4e" style="height:48px;padding:0 20px;display:flex;align-items:center;justify-content:space-between;border-radius:2px;background:rgba(255,255,255,.10);font:400 13px/1 var(--font-en);letter-spacing:.08em">Share on X<span>↗</span></a>
+    </div>
+  </article>
+  <nav style="margin:0 20px;border-top:1px solid var(--color-border)">
+    <a href="#4e" style="padding:24px 0;border-bottom:1px solid var(--color-border);display:flex;flex-direction:column;gap:8px"><span style="font:400 12px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted)">← PREV</span><span style="font:400 14px/1.6 var(--font-ja)">創業50年の町工場、ブランドリニューアルの記録</span></a>
+    <a href="#4e" style="padding:24px 0;border-bottom:1px solid var(--color-border);display:flex;flex-direction:column;gap:8px;text-align:right"><span style="font:400 12px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted)">NEXT →</span><span style="font:400 14px/1.6 var(--font-ja)">採用サイトで「選ばれる」ために必要な3つの視点</span></a>
+  </nav>
+  <section style="padding:96px 20px;display:flex;flex-direction:column;gap:24px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font:400 13px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted)">( Related )</span>
+      <h2 style="margin:0;font:400 28px/1.3 var(--font-ja);letter-spacing:.04em">関連記事</h2>
+    </div>
+    <div>
+      <sc-for list="{{ related }}" as="p" hint-placeholder-count="3">
+        <a href="#4e" style="display:grid;grid-template-columns:120px minmax(0,1fr);gap:16px;padding:20px 0;border-top:1px solid var(--color-border)">
+          <div style="aspect-ratio:16/10;background:var(--color-surface-raised);border:1px solid var(--color-border)"></div>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <div style="display:flex;gap:12px;font:400 12px/1 var(--font-ja);color:var(--color-text-muted)"><span>{{ p.cat }}</span><span style="font-family:var(--font-en)">{{ p.date }}</span></div>
+            <span style="font:700 14px/1.6 var(--font-ja);line-break:strict">{{ p.title }}</span>
+          </div>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+  <dc-import name="SpFooter" hint-size="100%,1200px"></dc-import>
+</div>
+</div>
+<div class="dv-opt" id="4f">
+<div class="dv-olabel"><a class="dv-oid" href="#4f">4f</a>CONTACT — フォーム・FAQが動きます</div>
+<div class="dv-card" style="width:390px;color:var(--color-text)">
+  <dc-import name="SpHeader" hint-size="100%,72px"></dc-import>
+  <dc-import name="SpPageHero" en="Contact" ja="お問い合わせ" crumb="HOME / CONTACT" lead="デザインのご依頼、お見積もり、ちょっとしたご相談まで、お気軽にお問い合わせください。" hint-size="100%,340px"></dc-import>
+  <section style="padding:48px 20px 0;display:flex;flex-direction:column;gap:20px">
+    <div style="display:flex;align-items:center;gap:8px;font:400 13px/1 var(--font-ja);letter-spacing:.12em"><span style="width:6px;height:6px;border-radius:50%;background:var(--color-accent)"></span>デザイン依頼 受付中</div>
+    <p style="margin:0;font:400 14px/1.9 var(--font-ja);color:var(--color-text-muted);line-break:strict">いただいたお問い合わせには、2営業日以内に担当者よりご返信します。</p>
+  </section>
+  <section style="padding:48px 20px 96px">
+    <sc-if value="{{ isDone }}" hint-placeholder-val="{{ false }}">
+      <div role="status" style="padding:48px 0;border-top:1px solid var(--color-border);border-bottom:1px solid var(--color-border);display:flex;flex-direction:column;gap:16px">
+        <span style="display:flex;align-items:center;gap:8px;font:400 13px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted)"><span style="width:6px;height:6px;border-radius:50%;background:var(--color-accent)"></span>SENT</span>
+        <p style="margin:0;font:400 22px/1.5 var(--font-ja)">送信が完了しました。</p>
+        <p style="margin:0;font:400 14px/1.9 var(--font-ja);color:var(--color-text-muted)">確認メールをお送りしました。2営業日以内にご返信いたします。</p>
+        <button onClick="{{ reset }}" style="height:48px;border:none;border-radius:2px;background:rgba(255,255,255,.10);color:var(--color-text);font:400 14px/1 var(--font-ja);cursor:pointer">フォームに戻る</button>
+      </div>
+    </sc-if>
+    <sc-if value="{{ notDone }}" hint-placeholder-val="{{ true }}">
+      <form onSubmit="{{ submit }}" noValidate="{{ true }}" style="display:flex;flex-direction:column;gap:32px">
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <span style="font:400 14px/1 var(--font-ja)">ご依頼の種類</span>
+          <div style="display:flex;flex-wrap:wrap;gap:8px">
+            <sc-for list="{{ types }}" as="t" hint-placeholder-count="3">
+              <button type="button" aria-pressed="{{ t.pressed }}" onClick="{{ t.onClick }}" style="min-height:44px;padding:0 16px;border-radius:2px;border:1px solid {{ t.border }};background:{{ t.bg }};color:var(--color-text);font:400 14px/1 var(--font-ja);cursor:pointer">{{ t.label }}</button>
+            </sc-for>
+          </div>
+        </div>
+        <label style="display:flex;flex-direction:column;gap:4px">
+          <span style="font:400 14px/1 var(--font-ja)">お名前（必須）</span>
+          <input value="{{ f.name }}" onChange="{{ onName }}" placeholder="例）山田 太郎" aria-invalid="{{ inv.name }}" aria-describedby="sp-err-name" style="padding:12px 0;background:transparent;border:none;border-bottom:{{ bd.name }};color:var(--color-text);font:400 16px/1.6 var(--font-ja)" style-focus="border-bottom:2px solid var(--color-text)">
+          <sc-if value="{{ err.name }}" hint-placeholder-val="{{ false }}"><span id="sp-err-name" style="padding-top:8px;font:400 14px/1.6 var(--font-ja)">{{ err.name }}</span></sc-if>
+        </label>
+        <label style="display:flex;flex-direction:column;gap:4px">
+          <span style="font:400 14px/1 var(--font-ja)">会社名</span>
+          <input value="{{ f.company }}" onChange="{{ onCompany }}" placeholder="例）株式会社サンプル" style="padding:12px 0;background:transparent;border:none;border-bottom:1px solid var(--color-border);color:var(--color-text);font:400 16px/1.6 var(--font-ja)" style-focus="border-bottom:2px solid var(--color-text)">
+        </label>
+        <label style="display:flex;flex-direction:column;gap:4px">
+          <span style="font:400 14px/1 var(--font-ja)">メールアドレス（必須）</span>
+          <input type="email" value="{{ f.email }}" onChange="{{ onEmail }}" placeholder="例）info@example.com" aria-invalid="{{ inv.email }}" aria-describedby="sp-err-email" style="padding:12px 0;background:transparent;border:none;border-bottom:{{ bd.email }};color:var(--color-text);font:400 16px/1.6 var(--font-ja)" style-focus="border-bottom:2px solid var(--color-text)">
+          <sc-if value="{{ err.email }}" hint-placeholder-val="{{ false }}"><span id="sp-err-email" style="padding-top:8px;font:400 14px/1.6 var(--font-ja)">{{ err.email }}</span></sc-if>
+        </label>
+        <label style="display:flex;flex-direction:column;gap:4px">
+          <span style="font:400 14px/1 var(--font-ja)">お問い合わせ内容（必須）</span>
+          <textarea value="{{ f.message }}" onChange="{{ onMessage }}" placeholder="例）サイトのリニューアルを検討しています。" aria-invalid="{{ inv.message }}" aria-describedby="sp-err-message" rows="3" style="min-height:112px;resize:vertical;padding:12px 0;background:transparent;border:none;border-bottom:{{ bd.message }};color:var(--color-text);font:400 16px/1.8 var(--font-ja)" style-focus="border-bottom:2px solid var(--color-text)"></textarea>
+          <sc-if value="{{ err.message }}" hint-placeholder-val="{{ false }}"><span id="sp-err-message" style="padding-top:8px;font:400 14px/1.6 var(--font-ja)">{{ err.message }}</span></sc-if>
+        </label>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <label style="display:flex;align-items:center;gap:12px;min-height:44px;font:400 14px/1.6 var(--font-ja);cursor:pointer">
+            <input type="checkbox" checked="{{ f.agree }}" onChange="{{ onAgree }}" aria-invalid="{{ inv.agree }}" aria-describedby="sp-err-agree" style="width:20px;height:20px;margin:0;accent-color:var(--color-accent)">
+            <span><a href="#4g" style="text-decoration:underline;text-underline-offset:.2em">プライバシーポリシー</a>に同意する（必須）</span>
+          </label>
+          <sc-if value="{{ err.agree }}" hint-placeholder-val="{{ false }}"><span id="sp-err-agree" style="font:400 14px/1.6 var(--font-ja)">{{ err.agree }}</span></sc-if>
+        </div>
+        <button type="submit" disabled="{{ sending }}" style="height:48px;padding:0 20px;display:flex;align-items:center;justify-content:space-between;border:none;border-radius:2px;background:rgba(255,255,255,.10);color:var(--color-text);font:400 14px/1 var(--font-ja);cursor:pointer"><span>{{ submitLabel }}</span><span>→</span></button>
+      </form>
+    </sc-if>
+  </section>
+  <section style="padding:96px 20px;background:var(--color-bg-light);color:var(--color-text-on-light);display:flex;flex-direction:column;gap:32px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <span style="font:400 13px/1 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted-on-light)">( FAQ )</span>
+      <h2 style="margin:0;font:400 28px/1.3 var(--font-ja);letter-spacing:.04em">よくあるご質問</h2>
+    </div>
+    <div>
+      <sc-for list="{{ faqs }}" as="q" hint-placeholder-count="5">
+        <div style="border-top:1px solid var(--color-border-on-light)">
+          <button aria-expanded="{{ q.open }}" onClick="{{ q.onClick }}" style="width:100%;min-height:44px;padding:20px 0;display:grid;grid-template-columns:40px 1fr 20px;align-items:baseline;background:none;border:none;color:var(--color-text-on-light);text-align:left;cursor:pointer;font:400 15px/1.7 var(--font-ja)">
+            <span style="font:400 12px/1.7 var(--font-en);letter-spacing:.08em;color:var(--color-text-muted-on-light)">Q.{{ q.no }}</span><span>{{ q.q }}</span><span style="font:300 20px/1 var(--font-en);text-align:right">{{ q.icon }}</span>
+          </button>
+          <sc-if value="{{ q.open }}" hint-placeholder-val="{{ false }}">
+            <p style="margin:0;padding:0 0 24px 40px;font:400 14px/1.9 var(--font-ja);color:var(--color-text-muted-on-light);line-break:strict">{{ q.a }}</p>
+          </sc-if>
+        </div>
+      </sc-for>
+      <div style="border-top:1px solid var(--color-border-on-light)"></div>
+    </div>
+  </section>
+  <dc-import name="SpFooter" cta="{{ false }}" hint-size="100%,700px"></dc-import>
+</div>
+</div>
+
+<div class="dv-opt" id="4g">
+<div class="dv-olabel"><a class="dv-oid" href="#4g">4g</a>プライバシーポリシー</div>
+<div class="dv-card" style="width:390px;color:var(--color-text)">
+  <dc-import name="SpHeader" hint-size="100%,72px"></dc-import>
+  <dc-import name="SpPageHero" en="Privacy" ja="プライバシーポリシー" crumb="HOME / PRIVACY POLICY" lead="yuyadesign（以下「当社」）は、お客様の個人情報を以下の方針に基づき適切に取り扱います。" hint-size="100%,340px"></dc-import>
+  <section style="padding:48px 20px 96px;display:flex;flex-direction:column">
+    <sc-for list="{{ policy }}" as="pl" hint-placeholder-count="8">
+      <div style="padding:32px 0;border-top:1px solid var(--color-border);display:flex;flex-direction:column;gap:12px">
+        <h2 style="margin:0;display:flex;gap:12px;font:400 18px/1.5 var(--font-ja);letter-spacing:.04em"><span style="font:400 12px/2.2 var(--font-en);letter-spacing:.12em;color:var(--color-text-muted)">{{ pl.no }}</span>{{ pl.title }}</h2>
+        <p style="margin:0;font:400 14px/1.9 var(--font-ja);letter-spacing:.04em;color:var(--color-text-muted);line-break:strict">{{ pl.body }}</p>
+      </div>
+    </sc-for>
+  </section>
+  <dc-import name="SpFooter" hint-size="100%,1200px"></dc-import>
+</div>
+</div>
+</div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { openFaq: 0, cat: 'すべて', type: '企業様向け', f: { name: '', company: '', email: '', message: '', agree: false }, err: {}, status: 'idle' };
+  setF = (k, v) => this.setState(s => ({ f: { ...s.f, [k]: v }, err: { ...s.err, [k]: undefined } }));
+  submit = (e) => {
+    e.preventDefault();
+    const { f } = this.state, err = {};
+    if (!f.name.trim()) err.name = '※ お名前を入力してください';
+    if (!f.email.trim()) err.email = '※ メールアドレスを入力してください';
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email)) err.email = '※ メールアドレスの形式が正しくありません';
+    if (!f.message.trim()) err.message = '※ お問い合わせ内容を入力してください';
+    if (!f.agree) err.agree = '※ プライバシーポリシーへの同意が必要です';
+    if (Object.keys(err).length) return this.setState({ err });
+    this.setState({ status: 'sending', err: {} });
+    setTimeout(() => this.setState({ status: 'done' }), 1200);
+  };
+  renderVals() {
+    const { cat, type, f, err, status, openFaq } = this.state;
+    const posts = [
+      { cat: 'デザイン', date: '2026.09.12', title: '「整える」と「伝わる」のあいだにあるもの。デザインを始める前に考えていること' },
+      { cat: '制作事例', date: '2026.08.28', title: '創業50年の町工場、ブランドリニューアルの記録' },
+      { cat: 'デザイン', date: '2026.08.10', title: '採用サイトで「選ばれる」ために必要な3つの視点' },
+      { cat: 'お知らせ', date: '2026.07.30', title: '夏季休業期間のお知らせ' },
+      { cat: '制作事例', date: '2026.07.15', title: '個人事業主のポートフォリオサイトができるまで' },
+      { cat: 'デザイン', date: '2026.06.22', title: '色を減らすと、伝わりやすくなる理由' },
+      { cat: '制作事例', date: '2026.06.05', title: 'BtoB企業のサービスサイト、情報設計のプロセス' }
+    ];
+    const list = cat === 'すべて' ? posts : posts.filter(p => p.cat === cat);
+    const bd = k => err[k] ? '2px solid var(--color-text)' : '1px solid var(--color-border)';
+    return {
+      strengths: [
+        { no: '01', key: 'Strategy', ja: '課題から始める', body: 'デザインの前に、事業の目的と届けたい相手を整理します。' },
+        { no: '02', key: 'Craft', ja: '伝わる形にする', body: '整理した本質を、見た目と言葉の両面から形にします。' },
+        { no: '03', key: 'Partnership', ja: '公開後も伴走する', body: '成果を確かめながら、改善を重ねていきます。' }
+      ],
+      company: [
+        { k: '会社名', v: 'yuyadesign' }, { k: '代表', v: '〇〇 〇〇' }, { k: '所在地', v: '東京都〇〇区〇〇 0-0-0' },
+        { k: '設立', v: '20XX年X月' }, { k: '事業内容', v: 'ブランディング、Webサイト制作、グラフィックデザイン、運用・改善サポート' }, { k: 'お問い合わせ', v: 'お問い合わせフォームよりご連絡ください' }
+      ],
+      services: [
+        { no: '01', en: 'Branding', ja: 'ブランディング', body: '理念や強みを言語化し、ロゴ・トーン・ガイドラインまで一貫したブランドの形をつくります。' },
+        { no: '02', en: 'Website', ja: 'Webサイト制作', body: '情報設計からデザイン、実装まで。届けたい相手に伝わるコーポレートサイトを制作します。' },
+        { no: '03', en: 'Graphic', ja: 'グラフィックデザイン', body: '会社案内、パンフレット、広告など、目的に合わせた紙・デジタルのツールをデザインします。' },
+        { no: '04', en: 'Growth', ja: '運用・改善サポート', body: '公開後の効果を検証し、更新や改善を継続的にサポート。つくって終わりにしません。' }
+      ],
+      personal: [
+        { no: '01', en: 'Logo & Card', ja: 'ロゴ・名刺制作', body: '活動の顔となるロゴと名刺を、あなたらしさが伝わる形でデザインします。' },
+        { no: '02', en: 'Portfolio', ja: 'ポートフォリオサイト制作', body: '実績や人柄がひと目で伝わる、個人のためのWebサイトを制作します。' }
+      ],
+      steps: [
+        { no: '01', title: 'お問い合わせ', body: 'フォームよりご相談内容をお送りください。' },
+        { no: '02', title: 'ヒアリング', body: '課題や目的、届けたい相手をお伺いします。' },
+        { no: '03', title: 'ご提案', body: '進め方とお見積もりをご提案します。' },
+        { no: '04', title: 'デザイン・制作', body: '確認を重ねながら形にしていきます。' },
+        { no: '05', title: '公開・改善', body: '公開後も効果を見ながら伴走します。' }
+      ],
+      issues: [
+        { no: '01', text: '会社の強みや想いを、うまく言葉にできていない' },
+        { no: '02', text: 'ロゴや名刺、Webサイトの印象がばらばらになっている' },
+        { no: '03', text: '事業の成長に、ブランドの見え方が追いついていない' },
+        { no: '04', text: '社内で共有できるデザインの基準がない' }
+      ],
+      scope: [
+        { title: 'ヒアリング・ワークショップ', body: '事業の強みや想いを言葉にします。' },
+        { title: 'ブランドコンセプト', body: '軸となる考え方と言葉を定めます。' },
+        { title: 'ロゴデザイン', body: 'コンセプトを象徴するロゴを制作します。' },
+        { title: 'カラー・書体の設計', body: '一貫した印象をつくる基準を決めます。' },
+        { title: 'ブランドガイドライン', body: '社内外で使えるルールをまとめます。' },
+        { title: 'ツール展開', body: '名刺やWebなど各接点へ展開します。' }
+      ],
+      prices: [
+        { plan: 'ロゴ制作', note: 'ヒアリング／ロゴデザイン／基本データ一式', price: '10' },
+        { plan: 'ブランド設計', note: 'コンセプト／ロゴ／カラー・書体設計', price: '50' },
+        { plan: 'トータルブランディング', note: 'ブランド設計＋ガイドライン＋ツール展開', price: '100' }
+      ],
+      otherServices: [{ no: '02', en: 'Website', ja: 'Webサイト制作' }, { no: '03', en: 'Graphic', ja: 'グラフィックデザイン' }, { no: '04', en: 'Growth', ja: '運用・改善サポート' }],
+      cats: ['すべて', 'デザイン', '制作事例', 'お知らせ'].map(l => ({ label: l, selected: l === cat, line: l === cat ? 'var(--color-accent)' : 'transparent', color: l === cat ? 'var(--color-text)' : 'var(--color-text-muted)', onClick: () => this.setState({ cat: l }) })),
+      featured: list[0], restPosts: list.slice(1, 7), noPosts: list.length === 0,
+      related: posts.slice(1, 4),
+      faqs: [
+        { q: '相談だけでも大丈夫ですか？', a: 'はい、もちろんです。依頼するか決まっていない段階でも、お気軽にご相談ください。' },
+        { q: '費用はどのくらいかかりますか？', a: 'ご依頼内容や規模によって異なります。ヒアリングのうえ、お見積もりをご提示します。' },
+        { q: '制作期間はどのくらいですか？', a: 'ロゴ制作でおよそ1〜2か月、Webサイト制作でおよそ2〜4か月が目安です。' },
+        { q: '遠方でも依頼できますか？', a: 'はい。打ち合わせはオンラインで行うため、全国どこからでもご依頼いただけます。' },
+        { q: '公開後の更新もお願いできますか？', a: '運用・改善サポートとして、公開後の更新や改善も承っています。' }
+      ].map((x, i) => ({ ...x, no: String(i + 1).padStart(2, '0'), open: openFaq === i, icon: openFaq === i ? '−' : '+', onClick: () => this.setState(s => ({ openFaq: s.openFaq === i ? -1 : i })) })),
+      types: ['企業様向け', '個人のお客様向け', 'その他'].map(l => ({ label: l, pressed: l === type, border: l === type ? 'var(--color-text)' : 'var(--color-border)', bg: l === type ? 'rgba(255,255,255,.10)' : 'transparent', onClick: () => this.setState({ type: l }) })),
+      f, err,
+      inv: { name: err.name ? 'true' : undefined, email: err.email ? 'true' : undefined, message: err.message ? 'true' : undefined, agree: err.agree ? 'true' : undefined },
+      bd: { name: bd('name'), email: bd('email'), message: bd('message') },
+      onName: e => this.setF('name', e.target.value), onCompany: e => this.setF('company', e.target.value),
+      onEmail: e => this.setF('email', e.target.value), onMessage: e => this.setF('message', e.target.value),
+      onAgree: e => this.setF('agree', e.target.checked),
+      submit: this.submit, sending: status === 'sending', submitLabel: status === 'sending' ? '送信中…' : '送信する',
+      isDone: status === 'done', notDone: status !== 'done',
+      reset: () => this.setState({ status: 'idle', f: { name: '', company: '', email: '', message: '', agree: false } }),
+      policy: [
+        { no: '01', title: '個人情報の定義', body: '本ポリシーにおいて個人情報とは、氏名、会社名、メールアドレス、電話番号など、特定の個人を識別できる情報をいいます。' },
+        { no: '02', title: '取得する情報と取得方法', body: '当社は、お問い合わせフォームやメールを通じて、お客様ご自身が入力・送信された情報を取得します。' },
+        { no: '03', title: '利用目的', body: '取得した個人情報は、お問い合わせへの回答、お見積もりやご提案、業務上のご連絡のために利用し、それ以外の目的では利用しません。' },
+        { no: '04', title: '第三者への提供', body: '法令に基づく場合を除き、ご本人の同意なく個人情報を第三者に提供することはありません。' },
+        { no: '05', title: '安全管理', body: '当社は、個人情報の漏えい、滅失、毀損を防ぐため、必要かつ適切な安全管理措置を講じます。' },
+        { no: '06', title: '開示・訂正・削除', body: 'ご本人から個人情報の開示、訂正、利用停止、削除のご依頼があった場合は、ご本人確認のうえ速やかに対応します。' },
+        { no: '07', title: 'アクセス解析ツール', body: '当サイトでは、利用状況の把握のためにアクセス解析ツールを使用しています。取得するデータは匿名で、個人を特定するものではありません。' },
+        { no: '08', title: 'お問い合わせ窓口', body: '本ポリシーに関するお問い合わせは、お問い合わせフォームよりご連絡ください。' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
