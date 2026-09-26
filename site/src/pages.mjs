@@ -378,7 +378,94 @@ ${d.policy.map(pl => `      <section class="policy__item" id="policy-${pl.no}">
   </div>`
 });
 
+/* ---------- TOP ---------- */
+const arrow = '<span class="arrow" aria-hidden="true">↗</span>';
+
+const top = () => layout({
+  title: '',
+  description: '見た目を整えるだけではなく、届けたい人に届く形をつくる。yuyadesignは、ビジネスの課題に向き合うデザインパートナーです。',
+  current: 'home',
+  overlayHeader: true,
+  body: `
+  <section class="hero">
+    <div class="hero__bg ph--stripe" aria-hidden="true"><span class="hero__ph">hero photo</span></div>
+    <div class="hero__content">
+      <div class="status">${dot}デザイン依頼 受付中</div>
+      <h1 class="hero__title">デザインで、<br>伝わるを<br class="sp-only">変える。</h1>
+      <p class="hero__lead">見た目を整えるだけではなく、届けたい人に届く形をつくる。私たちは、ビジネスの課題に向き合うデザインパートナーです。</p>
+      <div class="hero__actions">
+        <a class="btn btn--glass" href="services.html">サービスを見る<span aria-hidden="true">&nbsp;→</span></a>
+        <a class="btn btn--glass" href="contact.html">お問い合わせ<span aria-hidden="true">&nbsp;→</span></a>
+      </div>
+      <span class="hero__scroll-sp sp-only" aria-hidden="true">Scroll ↓</span>
+    </div>
+    <div class="hero__scroll pc-only" aria-hidden="true"><span>Scroll</span><span class="hero__circle"></span></div>
+  </section>
+  <section class="section split section--light section--pc-128 on-light">
+    <div class="split__head">${secHead('About', '私たちについて')}</div>
+    <div class="split__body top-about">
+      <div class="prose">
+        <p>良いものをつくっているのに、伝わらない。多くの企業が抱えるこの課題は、見た目の問題ではなく「誰に・何を・どう届けるか」という設計の問題だと、私たちは考えています。</p>
+        <p>yuyadesignは、ブランドやサービスの本質を整理し、届けたい人に届く形へと翻訳するデザイン会社です。戦略の整理からWebサイト、グラフィック、公開後の改善まで一貫して伴走します。</p>
+        <p>目指すのは、つくって終わりではなく成果につながるデザイン。ビジネスの課題に向き合うパートナーとして、伝わるを変えていきます。</p>
+      </div>
+      <a class="text-link" href="about.html">私たちについて →</a>
+    </div>
+  </section>
+  <section class="section section--alt section--gap-48">
+    ${secHead('For Companies', '企業様向けサービス', { link: ['サービス一覧 →', 'services.html'] })}
+    <div class="top-svcs">
+${d.services.map(s => `      <a class="top-svc" href="${s.href}">
+        <div class="ph" aria-hidden="true">service image</div>
+        <span class="label top-svc__label">${dot}${s.no} — ${s.en}</span>
+        <div class="top-svc__row"><h3 class="top-svc__title">${s.ja}</h3>${arrow.replace('arrow', 'arrow sp-only')}</div>
+        <p class="top-svc__body">${s.body}</p>
+        ${arrow.replace('arrow', 'arrow top-svc__arrow pc-only')}
+      </a>`).join('\n')}
+    </div>
+  </section>
+  <section class="section">
+    <div class="top-personal-head">
+      ${secHead('For Individuals', '個人のお客様向けサービス')}
+      <p class="top-personal-lead">フリーランスや個人事業主の方にも、企業案件と同じ品質でお応えします。</p>
+    </div>
+    <div class="svc-cards top-personal">
+${d.personal.map(s => `      <a class="svc-card" href="${s.href}">
+        <div class="ph" aria-hidden="true">service image</div>
+        <div class="svc-card__text">
+          <span class="label">${dot}${s.no} — ${s.en}</span>
+          <div class="top-svc__row"><h3 class="svc-card__title">${s.ja}</h3>${arrow.replace('arrow', 'arrow sp-only')}</div>
+          <p class="svc-card__body">${s.body}</p>
+          ${arrow.replace('arrow', 'arrow top-svc__arrow pc-only')}
+        </div>
+      </a>`).join('\n')}
+    </div>
+  </section>
+  <section class="section section--light on-light">
+    <div class="sec-head-row">
+      <div class="sec-head">
+        <span class="eyebrow">( Blog )</span>
+        <h2 class="h2 h2--en">Media</h2>
+      </div>
+      <a class="text-link pc-only" href="blog.html">ブログ一覧 →</a>
+    </div>
+    <div class="media rule-list">
+${d.media.map(m => `      <a class="media__item" href="${m.href}"${m.external ? ' target="_blank" rel="noopener"' : ''}>
+        <div class="ph media__img" aria-hidden="true">media image</div>
+        <div class="media__text">
+          <span class="media__label">${m.no} — ${m.tag}</span>
+          <div class="top-svc__row"><h3 class="media__title">${m.name}</h3>${arrow.replace('arrow', 'arrow sp-only')}</div>
+          <p class="media__body">${m.body}</p>
+          ${arrow.replace('arrow', 'arrow top-svc__arrow pc-only')}
+        </div>
+      </a>`).join('\n')}
+    </div>
+    <a class="text-link sp-only" href="blog.html">ブログ一覧 →</a>
+  </section>`
+});
+
 export const pages = {
+  'index.html': top,
   'about.html': about,
   'services.html': services,
   'service-branding.html': serviceBranding,

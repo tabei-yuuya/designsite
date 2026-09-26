@@ -21,9 +21,9 @@ export const secHead = (eyebrow, title, { link } = {}) => {
     : head;
 };
 
-const header = current => `
+const header = (current, overlay) => `
 <a class="skip-link" href="#main">本文へスキップ</a>
-<header class="site-header">
+<header class="site-header${overlay ? ' site-header--overlay' : ''}">
   <a class="logo" href="index.html">${logo}</a>
   <nav class="gnav" aria-label="メインメニュー">
 ${nav.map(m => `    <a href="${m.href}"${m.key === current ? ' aria-current="page"' : ''}>${m.en}</a>`).join('\n')}
@@ -101,12 +101,12 @@ ${sns.map(s => `        <a href="${s.href}" target="_blank" rel="noopener">${s.l
   </div>
 </footer>`;
 
-export const layout = ({ title, description, current, body, cta = true, scripts = [] }) => `<!DOCTYPE html>
+export const layout = ({ title, description, current, body, cta = true, scripts = [], overlayHeader = false }) => `<!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>${title}｜yuyadesign</title>
+<title>${title ? `${title}｜yuyadesign` : 'yuyadesign｜デザインで、伝わるを変える。'}</title>
 <meta name="description" content="${esc(description)}">
 <meta name="theme-color" content="#0F1012">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -117,7 +117,7 @@ export const layout = ({ title, description, current, body, cta = true, scripts 
 ${scripts.map(s => `<script src="${s}" defer></script>`).join('\n')}
 </head>
 <body>
-${header(current)}
+${header(current, overlayHeader)}
 <main id="main">
 ${body}
 </main>
