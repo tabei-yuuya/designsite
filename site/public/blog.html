@@ -18,6 +18,13 @@
 <a class="skip-link" href="#main">本文へスキップ</a>
 <header class="site-header">
   <a class="logo" href="index.html">yuyadesign<span class="dot" aria-hidden="true"></span></a>
+  <nav class="gnav" aria-label="メインメニュー">
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="services.html">SERVICES</a>
+    <a href="blog.html" aria-current="page">BLOG</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
   <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="メニューを開く" data-menu-open>
     <span class="menu-btn__line"></span><span class="menu-btn__line"></span>
   </button>
@@ -29,7 +36,7 @@
       <span class="menu-btn__line"></span><span class="menu-btn__line"></span>
     </button>
   </div>
-  <nav class="menu__nav" aria-label="メインメニュー">
+  <nav class="menu__nav" aria-label="メニュー">
     <a class="menu__item" href="index.html"><span class="menu__en">HOME</span><span class="menu__ja">ホーム</span></a>
     <a class="menu__item" href="about.html"><span class="menu__en">ABOUT</span><span class="menu__ja">私たちについて</span></a>
     <a class="menu__item" href="services.html"><span class="menu__en">SERVICES</span><span class="menu__ja">サービス</span></a>
@@ -47,8 +54,10 @@
     <nav class="crumb" aria-label="パンくずリスト"><ol><li><a href="index.html">HOME</a></li><li><span aria-current="page">BLOG</span></li></ol></nav>
     <div class="page-hero__body">
       <div class="page-hero__en" aria-hidden="true">Blog</div>
-      <h1 class="page-hero__ja">ブログ</h1>
-      <p class="page-hero__lead">制作の裏側や、伝わるデザインの考え方、プロジェクトの事例を発信しています。</p>
+      <div class="page-hero__row">
+        <h1 class="page-hero__ja">ブログ</h1>
+        <p class="page-hero__lead">制作の裏側や、伝わるデザインの考え方、プロジェクトの事例を発信しています。</p>
+      </div>
     </div>
   </section>
   <div class="tabs" role="tablist" aria-label="カテゴリ">
@@ -61,91 +70,109 @@
     <div data-featured>
       <a class="post-featured" href="blog-post.html">
         <div class="ph" aria-hidden="true">eyecatch</div>
-        <div class="meta"><span>デザイン</span><time class="en" datetime="2026-09-12">2026.09.12</time></div>
-        <h2 class="post-featured__title">「整える」と「伝わる」のあいだにあるもの。デザインを始める前に考えていること</h2>
+        <div class="post-featured__text">
+          <div class="meta sp-only"><span>デザイン</span><time class="en" datetime="2026-09-12">2026.09.12</time></div>
+          <span class="post-featured__label pc-only">FEATURED — 2026.09.12</span>
+          <span class="post-featured__cat pc-only">デザイン</span>
+          <h2 class="post-featured__title">「整える」と「伝わる」のあいだにあるもの。デザインを始める前に考えていること</h2>
+          <p class="post-featured__excerpt pc-only">私たちが最初に手を動かすのは画面の上ではありません。誰に何を届けたいのかを言葉にするところから始めます。</p>
+          <span class="text-link pc-only">記事を読む →</span>
+        </div>
       </a>
     </div>
-    <div data-rest>
-        <a class="post-row" href="blog-post.html">
-          <div class="ph" aria-hidden="true"></div>
-          <div class="post-row__text">
+    <div class="post-cards" data-rest>
+        <a class="post-card" href="blog-post.html">
+          <div class="ph" aria-hidden="true"><span class="pc-only">eyecatch</span></div>
+          <div class="post-card__text">
             <div class="meta"><span>制作事例</span><time class="en" datetime="2026-08-28">2026.08.28</time></div>
-            <span class="post-row__title">創業50年の町工場、ブランドリニューアルの記録</span>
+            <h3 class="post-card__title">創業50年の町工場、ブランドリニューアルの記録</h3>
           </div>
         </a>
-        <a class="post-row" href="blog-post.html">
-          <div class="ph" aria-hidden="true"></div>
-          <div class="post-row__text">
+        <a class="post-card" href="blog-post.html">
+          <div class="ph" aria-hidden="true"><span class="pc-only">eyecatch</span></div>
+          <div class="post-card__text">
             <div class="meta"><span>デザイン</span><time class="en" datetime="2026-08-10">2026.08.10</time></div>
-            <span class="post-row__title">採用サイトで「選ばれる」ために必要な3つの視点</span>
+            <h3 class="post-card__title">採用サイトで「選ばれる」ために必要な3つの視点</h3>
           </div>
         </a>
-        <a class="post-row" href="blog-post.html">
-          <div class="ph" aria-hidden="true"></div>
-          <div class="post-row__text">
+        <a class="post-card" href="blog-post.html">
+          <div class="ph" aria-hidden="true"><span class="pc-only">eyecatch</span></div>
+          <div class="post-card__text">
             <div class="meta"><span>お知らせ</span><time class="en" datetime="2026-07-30">2026.07.30</time></div>
-            <span class="post-row__title">夏季休業期間のお知らせ</span>
+            <h3 class="post-card__title">夏季休業期間のお知らせ</h3>
           </div>
         </a>
-        <a class="post-row" href="blog-post.html">
-          <div class="ph" aria-hidden="true"></div>
-          <div class="post-row__text">
+        <a class="post-card" href="blog-post.html">
+          <div class="ph" aria-hidden="true"><span class="pc-only">eyecatch</span></div>
+          <div class="post-card__text">
             <div class="meta"><span>制作事例</span><time class="en" datetime="2026-07-15">2026.07.15</time></div>
-            <span class="post-row__title">個人事業主のポートフォリオサイトができるまで</span>
+            <h3 class="post-card__title">個人事業主のポートフォリオサイトができるまで</h3>
           </div>
         </a>
-        <a class="post-row" href="blog-post.html">
-          <div class="ph" aria-hidden="true"></div>
-          <div class="post-row__text">
+        <a class="post-card" href="blog-post.html">
+          <div class="ph" aria-hidden="true"><span class="pc-only">eyecatch</span></div>
+          <div class="post-card__text">
             <div class="meta"><span>デザイン</span><time class="en" datetime="2026-06-22">2026.06.22</time></div>
-            <span class="post-row__title">色を減らすと、伝わりやすくなる理由</span>
+            <h3 class="post-card__title">色を減らすと、伝わりやすくなる理由</h3>
           </div>
         </a>
-        <a class="post-row" href="blog-post.html">
-          <div class="ph" aria-hidden="true"></div>
-          <div class="post-row__text">
+        <a class="post-card" href="blog-post.html">
+          <div class="ph" aria-hidden="true"><span class="pc-only">eyecatch</span></div>
+          <div class="post-card__text">
             <div class="meta"><span>制作事例</span><time class="en" datetime="2026-06-05">2026.06.05</time></div>
-            <span class="post-row__title">BtoB企業のサービスサイト、情報設計のプロセス</span>
+            <h3 class="post-card__title">BtoB企業のサービスサイト、情報設計のプロセス</h3>
           </div>
         </a>
     </div>
     <p class="blog-empty" data-empty hidden>このカテゴリの記事はまだありません。</p>
     <nav class="pager" aria-label="ページ送り">
-      <a href="blog.html" aria-current="page">1</a>
-      <a href="#">2</a>
-      <a href="#">3</a>
-      <a class="pager__next" href="#" aria-label="次のページ">→</a>
+      <span class="pager__prev pc-only" aria-hidden="true">← PREV</span>
+      <div class="pager__nums">
+        <a href="blog.html" aria-current="page">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+      </div>
+      <a class="pager__next" href="#" aria-label="次のページ"><span class="pc-only">NEXT&nbsp;</span>→</a>
     </nav>
   </section>
-  <script type="application/json" id="blog-data">[{"cat":"デザイン","date":"2026.09.12","title":"「整える」と「伝わる」のあいだにあるもの。デザインを始める前に考えていること","href":"blog-post.html"},{"cat":"制作事例","date":"2026.08.28","title":"創業50年の町工場、ブランドリニューアルの記録","href":"blog-post.html"},{"cat":"デザイン","date":"2026.08.10","title":"採用サイトで「選ばれる」ために必要な3つの視点","href":"blog-post.html"},{"cat":"お知らせ","date":"2026.07.30","title":"夏季休業期間のお知らせ","href":"blog-post.html"},{"cat":"制作事例","date":"2026.07.15","title":"個人事業主のポートフォリオサイトができるまで","href":"blog-post.html"},{"cat":"デザイン","date":"2026.06.22","title":"色を減らすと、伝わりやすくなる理由","href":"blog-post.html"},{"cat":"制作事例","date":"2026.06.05","title":"BtoB企業のサービスサイト、情報設計のプロセス","href":"blog-post.html"}]</script>
+  <script type="application/json" id="blog-data">[{"cat":"デザイン","date":"2026.09.12","title":"「整える」と「伝わる」のあいだにあるもの。デザインを始める前に考えていること","excerpt":"私たちが最初に手を動かすのは画面の上ではありません。誰に何を届けたいのかを言葉にするところから始めます。","href":"blog-post.html"},{"cat":"制作事例","date":"2026.08.28","title":"創業50年の町工場、ブランドリニューアルの記録","href":"blog-post.html"},{"cat":"デザイン","date":"2026.08.10","title":"採用サイトで「選ばれる」ために必要な3つの視点","href":"blog-post.html"},{"cat":"お知らせ","date":"2026.07.30","title":"夏季休業期間のお知らせ","href":"blog-post.html"},{"cat":"制作事例","date":"2026.07.15","title":"個人事業主のポートフォリオサイトができるまで","href":"blog-post.html"},{"cat":"デザイン","date":"2026.06.22","title":"色を減らすと、伝わりやすくなる理由","href":"blog-post.html"},{"cat":"制作事例","date":"2026.06.05","title":"BtoB企業のサービスサイト、情報設計のプロセス","href":"blog-post.html"}]</script>
 </main>
 
 <section class="cta" aria-labelledby="cta-title">
-  <span class="eyebrow">( Contact )</span>
-  <h2 class="cta__title" id="cta-title">お問い合わせは<br>こちら</h2>
-  <p class="cta__lead">デザインのご依頼、お見積もり、ちょっとしたご相談まで、お気軽にお問い合わせください。</p>
-  <div class="status"><span class="dot" aria-hidden="true"></span>デザイン依頼 受付中</div>
-  <a class="btn btn--en" href="contact.html">CONTACT<span aria-hidden="true">→</span></a>
+  <div class="cta__main">
+    <span class="eyebrow">( Contact )</span>
+    <h2 class="cta__title" id="cta-title">お問い合わせは<br class="sp-only">こちら</h2>
+    <p class="cta__lead">デザインのご依頼、お見積もり、ちょっとしたご相談まで、お気軽にお問い合わせください。</p>
+  </div>
+  <div class="cta__action">
+    <div class="status"><span class="dot" aria-hidden="true"></span>デザイン依頼 受付中</div>
+    <a class="btn btn--en btn--lg" href="contact.html">CONTACT<span aria-hidden="true">→</span></a>
+  </div>
 </section>
 <footer class="site-footer">
-  <a class="logo" href="index.html">yuyadesign<span class="dot" aria-hidden="true"></span></a>
-  <p class="site-footer__copy">デザインで、<br>伝わるを変える。</p>
-  <div class="site-footer__cols">
-    <nav class="site-footer__nav site-footer__nav--menu" aria-label="フッターメニュー">
-      <span class="site-footer__label">( Menu )</span>
-      <a href="index.html">HOME</a>
-      <a href="about.html">ABOUT</a>
-      <a href="services.html">SERVICES</a>
-      <a href="blog.html">BLOG</a>
-      <a href="contact.html">CONTACT</a>
-    </nav>
-    <nav class="site-footer__nav" aria-label="SNS">
-      <span class="site-footer__label">( Follow )</span>
-      <a href="#" target="_blank" rel="noopener">X（Twitter） ↗</a>
-      <a href="#" target="_blank" rel="noopener">YouTube ↗</a>
-      <a href="#" target="_blank" rel="noopener">TikTok ↗</a>
-      <span class="site-footer__org">運営：yuyadesign</span>
-    </nav>
+  <div class="site-footer__top">
+    <div class="site-footer__brand">
+      <a class="logo" href="index.html">yuyadesign<span class="dot" aria-hidden="true"></span></a>
+      <p class="site-footer__copy">デザインで、<br>伝わるを変える。</p>
+    </div>
+    <div class="site-footer__cols">
+      <nav class="site-footer__nav site-footer__nav--menu" aria-label="フッターメニュー">
+        <span class="site-footer__label">( Menu )</span>
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="services.html">SERVICES</a>
+        <a href="blog.html">BLOG</a>
+        <a href="contact.html">CONTACT</a>
+      </nav>
+      <nav class="site-footer__nav" aria-label="SNS">
+        <span class="site-footer__label">( Follow )</span>
+        <a href="#" target="_blank" rel="noopener">X（Twitter） ↗</a>
+        <a href="#" target="_blank" rel="noopener">YouTube ↗</a>
+        <a href="#" target="_blank" rel="noopener">TikTok ↗</a>
+        <span class="site-footer__label site-footer__label--company pc-only">( Company )</span>
+        <span class="site-footer__org">運営：yuyadesign</span>
+      </nav>
+    </div>
   </div>
   <div class="site-footer__bottom">
     <div class="site-footer__legal"><a href="privacy.html">プライバシーポリシー</a><a href="#">特定商取引法に基づく表示</a></div>

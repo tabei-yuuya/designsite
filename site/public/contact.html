@@ -18,6 +18,13 @@
 <a class="skip-link" href="#main">本文へスキップ</a>
 <header class="site-header">
   <a class="logo" href="index.html">yuyadesign<span class="dot" aria-hidden="true"></span></a>
+  <nav class="gnav" aria-label="メインメニュー">
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="services.html">SERVICES</a>
+    <a href="blog.html">BLOG</a>
+    <a href="contact.html" aria-current="page">CONTACT</a>
+  </nav>
   <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="メニューを開く" data-menu-open>
     <span class="menu-btn__line"></span><span class="menu-btn__line"></span>
   </button>
@@ -29,7 +36,7 @@
       <span class="menu-btn__line"></span><span class="menu-btn__line"></span>
     </button>
   </div>
-  <nav class="menu__nav" aria-label="メインメニュー">
+  <nav class="menu__nav" aria-label="メニュー">
     <a class="menu__item" href="index.html"><span class="menu__en">HOME</span><span class="menu__ja">ホーム</span></a>
     <a class="menu__item" href="about.html"><span class="menu__en">ABOUT</span><span class="menu__ja">私たちについて</span></a>
     <a class="menu__item" href="services.html"><span class="menu__en">SERVICES</span><span class="menu__ja">サービス</span></a>
@@ -47,67 +54,78 @@
     <nav class="crumb" aria-label="パンくずリスト"><ol><li><a href="index.html">HOME</a></li><li><span aria-current="page">CONTACT</span></li></ol></nav>
     <div class="page-hero__body">
       <div class="page-hero__en" aria-hidden="true">Contact</div>
-      <h1 class="page-hero__ja">お問い合わせ</h1>
-      <p class="page-hero__lead">デザインのご依頼、お見積もり、ちょっとしたご相談まで、お気軽にお問い合わせください。</p>
+      <div class="page-hero__row">
+        <h1 class="page-hero__ja">お問い合わせ</h1>
+        <p class="page-hero__lead">デザインのご依頼、お見積もり、ちょっとしたご相談まで、お気軽にお問い合わせください。</p>
+      </div>
     </div>
   </section>
-  <section class="contact-intro">
-    <div class="status"><span class="dot" aria-hidden="true"></span>デザイン依頼 受付中</div>
-    <p>いただいたお問い合わせには、2営業日以内に担当者よりご返信します。</p>
-  </section>
-  <section class="contact-body" aria-label="お問い合わせフォーム">
-    <div class="form-done" role="status" tabindex="-1" data-done hidden>
-      <span class="status"><span class="dot" aria-hidden="true"></span>SENT</span>
-      <p class="form-done__title">送信が完了しました。</p>
-      <p class="form-done__body">確認メールをお送りしました。2営業日以内にご返信いたします。</p>
-      <button class="btn" type="button" data-reset>フォームに戻る</button>
-    </div>
-    <form class="form" action="#" method="post" novalidate data-contact-form>
-      <div class="field field--group" role="group" aria-labelledby="type-label">
-        <span class="field__label" id="type-label">ご依頼の種類</span>
-        <input type="hidden" name="type" value="企業様向け">
-        <div class="choices">
-          <button class="choice" type="button" aria-pressed="true" data-type="企業様向け">企業様向け</button>
-          <button class="choice" type="button" aria-pressed="false" data-type="個人のお客様向け">個人のお客様向け</button>
-          <button class="choice" type="button" aria-pressed="false" data-type="その他">その他</button>
+  <div class="contact">
+    <section class="contact-intro" aria-label="ご案内">
+      <div class="status"><span class="dot" aria-hidden="true"></span>デザイン依頼 受付中</div>
+      <p>いただいたお問い合わせには、2営業日以内に担当者よりご返信します。</p>
+      <div class="contact-flow pc-only">
+        <span class="eyebrow">( Flow )</span>
+        <ol class="rule-list plain-list">
+          <li><span class="contact-flow__no">01</span><div class="stack-4"><span class="contact-flow__title">お問い合わせ</span><span class="t-13 muted">フォームより内容をお送りください。</span></div></li>
+          <li><span class="contact-flow__no">02</span><div class="stack-4"><span class="contact-flow__title">ヒアリング</span><span class="t-13 muted">オンラインで課題やご要望をお伺いします。</span></div></li>
+          <li><span class="contact-flow__no">03</span><div class="stack-4"><span class="contact-flow__title">ご提案・お見積もり</span><span class="t-13 muted">内容をもとに、進め方と費用をご提案します。</span></div></li>
+        </ol>
+      </div>
+    </section>
+    <section class="contact-body" aria-label="お問い合わせフォーム">
+      <div class="form-done" role="status" tabindex="-1" data-done hidden>
+        <span class="status"><span class="dot" aria-hidden="true"></span>SENT</span>
+        <p class="form-done__title">送信が完了しました。</p>
+        <p class="form-done__body"><span class="pc-only">ご入力いただいたメールアドレス宛に</span>確認メールをお送りしました。2営業日以内にご返信いたします。</p>
+        <button class="btn" type="button" data-reset>フォームに戻る</button>
+      </div>
+      <form class="form" action="#" method="post" novalidate data-contact-form>
+        <div class="field field--group" role="group" aria-labelledby="type-label">
+          <span class="field__label" id="type-label">ご依頼の種類</span>
+          <input type="hidden" name="type" value="企業様向け">
+          <div class="choices">
+            <button class="choice" type="button" aria-pressed="true" data-type="企業様向け">企業様向け</button>
+            <button class="choice" type="button" aria-pressed="false" data-type="個人のお客様向け">個人のお客様向け</button>
+            <button class="choice" type="button" aria-pressed="false" data-type="その他">その他</button>
+          </div>
         </div>
-      </div>
-      <div class="field">
-        <label class="field__label" for="f-name">お名前（必須）</label>
-        <input type="text" id="f-name" name="name" class="input" placeholder="例）山田 太郎" autocomplete="name" required aria-describedby="err-name">
-        <span class="field__error" id="err-name"></span>
-      </div>
-      <div class="field">
-        <label class="field__label" for="f-company">会社名</label>
-        <input type="text" id="f-company" name="company" class="input" placeholder="例）株式会社サンプル" autocomplete="organization">
-      </div>
-      <div class="field">
-        <label class="field__label" for="f-email">メールアドレス（必須）</label>
-        <input type="email" id="f-email" name="email" class="input" placeholder="例）info@example.com" autocomplete="email" required aria-describedby="err-email">
-        <span class="field__error" id="err-email"></span>
-      </div>
-      <div class="field">
-        <label class="field__label" for="f-message">お問い合わせ内容（必須）</label>
-        <textarea id="f-message" name="message" class="input" placeholder="例）サイトのリニューアルを検討しています。" required aria-describedby="err-message" rows="3"></textarea>
-        <span class="field__error" id="err-message"></span>
-      </div>
-      <div class="agree">
-        <label class="checkbox">
-          <input type="checkbox" name="agree" id="f-agree" required aria-describedby="err-agree">
-          <span><a class="inline-link" href="privacy.html">プライバシーポリシー</a>に同意する（必須）</span>
-        </label>
-        <span class="field__error" id="err-agree"></span>
-      </div>
-      <button class="btn" type="submit"><span data-submit-label>送信する</span><span aria-hidden="true">→</span></button>
-    </form>
-  </section>
-  <section class="section section--light on-light">
-    
-    <div class="sec-head">
+        <div class="field">
+          <label class="field__label" for="f-name">お名前（必須）</label>
+          <input type="text" id="f-name" name="name" class="input" placeholder="例）山田 太郎" autocomplete="name" required aria-describedby="err-name">
+          <span class="field__error" id="err-name"></span>
+        </div>
+        <div class="field">
+          <label class="field__label" for="f-company">会社名</label>
+          <input type="text" id="f-company" name="company" class="input" placeholder="例）株式会社サンプル" autocomplete="organization">
+        </div>
+        <div class="field">
+          <label class="field__label" for="f-email">メールアドレス（必須）</label>
+          <input type="email" id="f-email" name="email" class="input" placeholder="例）info@example.com" autocomplete="email" required aria-describedby="err-email">
+          <span class="field__error" id="err-email"></span>
+        </div>
+        <div class="field">
+          <label class="field__label" for="f-message">お問い合わせ内容（必須）</label>
+          <textarea id="f-message" name="message" class="input" placeholder="例）サイトのリニューアルを検討しています。" required aria-describedby="err-message" rows="3"></textarea>
+          <span class="field__error" id="err-message"></span>
+        </div>
+        <div class="agree">
+          <label class="checkbox">
+            <input type="checkbox" name="agree" id="f-agree" required aria-describedby="err-agree">
+            <span><a class="inline-link" href="privacy.html">プライバシーポリシー</a>に同意する（必須）</span>
+          </label>
+          <span class="field__error" id="err-agree"></span>
+        </div>
+        <button class="btn form__submit" type="submit"><span data-submit-label>送信する</span><span aria-hidden="true">→</span></button>
+      </form>
+    </section>
+  </div>
+  <section class="section split split--4 section--light on-light">
+    <div class="split__head"><div class="sec-head">
       <span class="eyebrow">( FAQ )</span>
       <h2 class="h2">よくあるご質問</h2>
-    </div>
-    <div class="rule-list" data-faq>
+    </div></div>
+    <div class="split__body rule-list" data-faq>
       <div>
         <h3 class="faq__h"><button class="faq__q" type="button" aria-expanded="true" aria-controls="faq-a-01" id="faq-q-01"><span class="faq__no">Q.01</span><span>相談だけでも大丈夫ですか？</span><span class="faq__icon" aria-hidden="true">−</span></button></h3>
         <p class="faq__a" id="faq-a-01" role="region" aria-labelledby="faq-q-01">はい、もちろんです。依頼するか決まっていない段階でも、お気軽にご相談ください。</p>
@@ -134,24 +152,29 @@
 
 
 <footer class="site-footer">
-  <a class="logo" href="index.html">yuyadesign<span class="dot" aria-hidden="true"></span></a>
-  <p class="site-footer__copy">デザインで、<br>伝わるを変える。</p>
-  <div class="site-footer__cols">
-    <nav class="site-footer__nav site-footer__nav--menu" aria-label="フッターメニュー">
-      <span class="site-footer__label">( Menu )</span>
-      <a href="index.html">HOME</a>
-      <a href="about.html">ABOUT</a>
-      <a href="services.html">SERVICES</a>
-      <a href="blog.html">BLOG</a>
-      <a href="contact.html">CONTACT</a>
-    </nav>
-    <nav class="site-footer__nav" aria-label="SNS">
-      <span class="site-footer__label">( Follow )</span>
-      <a href="#" target="_blank" rel="noopener">X（Twitter） ↗</a>
-      <a href="#" target="_blank" rel="noopener">YouTube ↗</a>
-      <a href="#" target="_blank" rel="noopener">TikTok ↗</a>
-      <span class="site-footer__org">運営：yuyadesign</span>
-    </nav>
+  <div class="site-footer__top">
+    <div class="site-footer__brand">
+      <a class="logo" href="index.html">yuyadesign<span class="dot" aria-hidden="true"></span></a>
+      <p class="site-footer__copy">デザインで、<br>伝わるを変える。</p>
+    </div>
+    <div class="site-footer__cols">
+      <nav class="site-footer__nav site-footer__nav--menu" aria-label="フッターメニュー">
+        <span class="site-footer__label">( Menu )</span>
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="services.html">SERVICES</a>
+        <a href="blog.html">BLOG</a>
+        <a href="contact.html">CONTACT</a>
+      </nav>
+      <nav class="site-footer__nav" aria-label="SNS">
+        <span class="site-footer__label">( Follow )</span>
+        <a href="#" target="_blank" rel="noopener">X（Twitter） ↗</a>
+        <a href="#" target="_blank" rel="noopener">YouTube ↗</a>
+        <a href="#" target="_blank" rel="noopener">TikTok ↗</a>
+        <span class="site-footer__label site-footer__label--company pc-only">( Company )</span>
+        <span class="site-footer__org">運営：yuyadesign</span>
+      </nav>
+    </div>
   </div>
   <div class="site-footer__bottom">
     <div class="site-footer__legal"><a href="privacy.html">プライバシーポリシー</a><a href="#">特定商取引法に基づく表示</a></div>

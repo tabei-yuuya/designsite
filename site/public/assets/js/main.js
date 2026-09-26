@@ -1,4 +1,4 @@
-// 全ページ共通: ハンバーガーメニュー、SERVICES のセクションタブ
+// 全ページ共通: ハンバーガーメニュー、SERVICES のセクションタブ、リンクのコピー
 (() => {
   const menu = document.getElementById('site-menu');
   const openBtn = document.querySelector('[data-menu-open]');
@@ -60,4 +60,20 @@
     entries.forEach(en => { if (en.isIntersecting) setActive(en.target.id); });
   }, { rootMargin: '-40% 0px -55% 0px' });
   sections.forEach(s => io.observe(s));
+})();
+
+(() => {
+  // BLOG記事: リンクをコピー
+  document.querySelectorAll('[data-copy-link]').forEach(btn => {
+    const label = btn.textContent;
+    btn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(location.href);
+        btn.textContent = 'コピーしました';
+      } catch {
+        btn.textContent = 'コピーできませんでした';
+      }
+      setTimeout(() => { btn.textContent = label; }, 2000);
+    });
+  });
 })();

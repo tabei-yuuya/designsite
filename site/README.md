@@ -1,6 +1,11 @@
-# yuyadesign 下層ページ（スマホ）
+# yuyadesign 下層ページ
 
-`project/スマホ 下層ページ.dc.html`（390px）を静的サイトとして実装したもの。依存パッケージなし。
+Claude Design の下層ページを静的サイトとして実装したもの。依存パッケージなし。
+
+- スマホ: `project/スマホ 下層ページ.dc.html`（390px）
+- PC: `project/下層ページ.dc.html`（1440px）
+
+同じ HTML を画面幅で切り替える（1023px まではスマホ、1024px 以上で PC レイアウト）。
 
 - `src/data.mjs` … テキストデータ（本文はデザイン段階の仮テキスト）
 - `src/layout.mjs` … 共通のヘッダー・メニュー・ページ見出し・フッター
@@ -26,4 +31,4 @@ npm run serve   # http://localhost:8080/about.html
 - TOP（`index.html`）は未実装。HOME へのリンクは切れている
 - お問い合わせフォームは送信を模擬しているだけ（`assets/js/contact.js` の TODO）
 - 画像はプレースホルダー、会社概要は「〇〇」、SNS・ページ送り2/3・特商法表示のリンクは `#`
-- PC 版のレイアウト（640px 以上）は未対応
+- タブレット幅（640〜1023px）はスマホのレイアウトを横に伸ばして表示している

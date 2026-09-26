@@ -18,6 +18,13 @@
 <a class="skip-link" href="#main">本文へスキップ</a>
 <header class="site-header">
   <a class="logo" href="index.html">yuyadesign<span class="dot" aria-hidden="true"></span></a>
+  <nav class="gnav" aria-label="メインメニュー">
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="services.html" aria-current="page">SERVICES</a>
+    <a href="blog.html">BLOG</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
   <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="メニューを開く" data-menu-open>
     <span class="menu-btn__line"></span><span class="menu-btn__line"></span>
   </button>
@@ -29,7 +36,7 @@
       <span class="menu-btn__line"></span><span class="menu-btn__line"></span>
     </button>
   </div>
-  <nav class="menu__nav" aria-label="メインメニュー">
+  <nav class="menu__nav" aria-label="メニュー">
     <a class="menu__item" href="index.html"><span class="menu__en">HOME</span><span class="menu__ja">ホーム</span></a>
     <a class="menu__item" href="about.html"><span class="menu__en">ABOUT</span><span class="menu__ja">私たちについて</span></a>
     <a class="menu__item" href="services.html" aria-current="page"><span class="menu__en">SERVICES</span><span class="menu__ja">サービス</span></a>
@@ -47,8 +54,10 @@
     <nav class="crumb" aria-label="パンくずリスト"><ol><li><a href="index.html">HOME</a></li><li><span aria-current="page">SERVICES</span></li></ol></nav>
     <div class="page-hero__body">
       <div class="page-hero__en" aria-hidden="true">Services</div>
-      <h1 class="page-hero__ja">サービス</h1>
-      <p class="page-hero__lead">企業様・個人のお客様それぞれの課題に合わせて、戦略から制作、公開後の改善までご提供します。</p>
+      <div class="page-hero__row">
+        <h1 class="page-hero__ja">サービス</h1>
+        <p class="page-hero__lead">企業様・個人のお客様それぞれの課題に合わせて、戦略から制作、公開後の改善までご提供します。</p>
+      </div>
     </div>
   </section>
   <nav class="tabs" aria-label="サービスの種類" data-section-tabs>
@@ -56,107 +65,129 @@
     <a class="tab" href="#individuals">個人のお客様向け</a>
   </nav>
   <section class="section section--alt section--gap-48" id="companies">
-    
     <div class="sec-head">
       <span class="eyebrow">( For Companies )</span>
       <h2 class="h2">企業様向けサービス</h2>
     </div>
-
-      <a class="svc-card" href="service-branding.html">
-        <div class="ph" aria-hidden="true">service image</div>
-        <span class="svc-card__label"><span class="dot" aria-hidden="true"></span>01 — Branding</span>
-        <h3 class="svc-card__title">ブランディング</h3>
-        <p class="svc-card__body">理念や強みを言語化し、ロゴ・トーン・ガイドラインまで一貫したブランドの形をつくります。</p>
-        <span class="svc-card__more text-link">詳しく見る →</span>
-      </a>
-
-      <a class="svc-card" href="service-branding.html">
-        <div class="ph" aria-hidden="true">service image</div>
-        <span class="svc-card__label"><span class="dot" aria-hidden="true"></span>02 — Website</span>
-        <h3 class="svc-card__title">Webサイト制作</h3>
-        <p class="svc-card__body">情報設計からデザイン、実装まで。届けたい相手に伝わるコーポレートサイトを制作します。</p>
-        <span class="svc-card__more text-link">詳しく見る →</span>
-      </a>
-
-      <a class="svc-card" href="service-branding.html">
-        <div class="ph" aria-hidden="true">service image</div>
-        <span class="svc-card__label"><span class="dot" aria-hidden="true"></span>03 — Graphic</span>
-        <h3 class="svc-card__title">グラフィックデザイン</h3>
-        <p class="svc-card__body">会社案内、パンフレット、広告など、目的に合わせた紙・デジタルのツールをデザインします。</p>
-        <span class="svc-card__more text-link">詳しく見る →</span>
-      </a>
-
-      <a class="svc-card" href="service-branding.html">
-        <div class="ph" aria-hidden="true">service image</div>
-        <span class="svc-card__label"><span class="dot" aria-hidden="true"></span>04 — Growth</span>
-        <h3 class="svc-card__title">運用・改善サポート</h3>
-        <p class="svc-card__body">公開後の効果を検証し、更新や改善を継続的にサポート。つくって終わりにしません。</p>
-        <span class="svc-card__more text-link">詳しく見る →</span>
-      </a>
+    <div class="svc-rows">
+    <a class="svc-row" href="service-branding.html">
+      <div class="ph svc-row__img" aria-hidden="true">service image</div>
+      <span class="svc-row__no"><span class="dot" aria-hidden="true"></span>01<span class="sp-only">&nbsp;— Branding</span></span>
+      <div class="svc-row__text">
+        <span class="svc-row__en pc-only">Branding</span>
+        <h3 class="svc-row__title">ブランディング</h3>
+        <p class="svc-row__body">理念や強みを言語化し、ロゴ・トーン・ガイドラインまで一貫したブランドの形をつくります。</p>
+        <span class="svc-row__more text-link">詳しく見る →</span>
+      </div>
+    </a>
+    <a class="svc-row" href="service-branding.html">
+      <div class="ph svc-row__img" aria-hidden="true">service image</div>
+      <span class="svc-row__no"><span class="dot" aria-hidden="true"></span>02<span class="sp-only">&nbsp;— Website</span></span>
+      <div class="svc-row__text">
+        <span class="svc-row__en pc-only">Website</span>
+        <h3 class="svc-row__title">Webサイト制作</h3>
+        <p class="svc-row__body">情報設計からデザイン、実装まで。届けたい相手に伝わるコーポレートサイトを制作します。</p>
+        <span class="svc-row__more text-link">詳しく見る →</span>
+      </div>
+    </a>
+    <a class="svc-row" href="service-branding.html">
+      <div class="ph svc-row__img" aria-hidden="true">service image</div>
+      <span class="svc-row__no"><span class="dot" aria-hidden="true"></span>03<span class="sp-only">&nbsp;— Graphic</span></span>
+      <div class="svc-row__text">
+        <span class="svc-row__en pc-only">Graphic</span>
+        <h3 class="svc-row__title">グラフィックデザイン</h3>
+        <p class="svc-row__body">会社案内、パンフレット、広告など、目的に合わせた紙・デジタルのツールをデザインします。</p>
+        <span class="svc-row__more text-link">詳しく見る →</span>
+      </div>
+    </a>
+    <a class="svc-row" href="service-branding.html">
+      <div class="ph svc-row__img" aria-hidden="true">service image</div>
+      <span class="svc-row__no"><span class="dot" aria-hidden="true"></span>04<span class="sp-only">&nbsp;— Growth</span></span>
+      <div class="svc-row__text">
+        <span class="svc-row__en pc-only">Growth</span>
+        <h3 class="svc-row__title">運用・改善サポート</h3>
+        <p class="svc-row__body">公開後の効果を検証し、更新や改善を継続的にサポート。つくって終わりにしません。</p>
+        <span class="svc-row__more text-link">詳しく見る →</span>
+      </div>
+    </a>
+    </div>
   </section>
   <section class="section section--gap-48 section--pb-64" id="individuals">
-    
     <div class="sec-head">
       <span class="eyebrow">( For Individuals )</span>
       <h2 class="h2">個人のお客様向けサービス</h2>
     </div>
-
+    <div class="svc-cards">
       <a class="svc-card" href="service-branding.html">
         <div class="ph" aria-hidden="true">service image</div>
-        <span class="svc-card__label"><span class="dot" aria-hidden="true"></span>01 — Logo & Card</span>
-        <h3 class="svc-card__title svc-card__title--sm">ロゴ・名刺制作</h3>
-        <p class="svc-card__body">活動の顔となるロゴと名刺を、あなたらしさが伝わる形でデザインします。</p>
+        <div class="svc-card__text">
+          <span class="label"><span class="dot" aria-hidden="true"></span>01 — Logo & Card</span>
+          <h3 class="svc-card__title">ロゴ・名刺制作</h3>
+          <p class="svc-card__body">活動の顔となるロゴと名刺を、あなたらしさが伝わる形でデザインします。</p>
+          <span class="svc-card__more text-link pc-only">詳しく見る →</span>
+        </div>
       </a>
-
       <a class="svc-card" href="service-branding.html">
         <div class="ph" aria-hidden="true">service image</div>
-        <span class="svc-card__label"><span class="dot" aria-hidden="true"></span>02 — Portfolio</span>
-        <h3 class="svc-card__title svc-card__title--sm">ポートフォリオサイト制作</h3>
-        <p class="svc-card__body">実績や人柄がひと目で伝わる、個人のためのWebサイトを制作します。</p>
+        <div class="svc-card__text">
+          <span class="label"><span class="dot" aria-hidden="true"></span>02 — Portfolio</span>
+          <h3 class="svc-card__title">ポートフォリオサイト制作</h3>
+          <p class="svc-card__body">実績や人柄がひと目で伝わる、個人のためのWebサイトを制作します。</p>
+          <span class="svc-card__more text-link pc-only">詳しく見る →</span>
+        </div>
       </a>
+    </div>
   </section>
   <section class="section section--light on-light">
-    
     <div class="sec-head">
       <span class="eyebrow">( Flow )</span>
       <h2 class="h2">制作の流れ</h2>
     </div>
-    <ol class="rule-list plain-list">
-      <li class="step"><span class="step__no">01</span><div class="stack-4"><span class="t-15b">お問い合わせ</span><span class="t-13">フォームよりご相談内容をお送りください。</span></div></li>
-      <li class="step"><span class="step__no">02</span><div class="stack-4"><span class="t-15b">ヒアリング</span><span class="t-13">課題や目的、届けたい相手をお伺いします。</span></div></li>
-      <li class="step"><span class="step__no">03</span><div class="stack-4"><span class="t-15b">ご提案</span><span class="t-13">進め方とお見積もりをご提案します。</span></div></li>
-      <li class="step"><span class="step__no">04</span><div class="stack-4"><span class="t-15b">デザイン・制作</span><span class="t-13">確認を重ねながら形にしていきます。</span></div></li>
-      <li class="step"><span class="step__no">05</span><div class="stack-4"><span class="t-15b">公開・改善</span><span class="t-13">公開後も効果を見ながら伴走します。</span></div></li>
+    <ol class="steps rule-list plain-list">
+      <li class="step"><span class="step__no">01</span><div class="step__text"><h3 class="step__title">お問い合わせ</h3><p class="step__body">フォームよりご相談内容をお送りください。</p></div></li>
+      <li class="step"><span class="step__no">02</span><div class="step__text"><h3 class="step__title">ヒアリング</h3><p class="step__body">課題や目的、届けたい相手をお伺いします。</p></div></li>
+      <li class="step"><span class="step__no">03</span><div class="step__text"><h3 class="step__title">ご提案</h3><p class="step__body">進め方とお見積もりをご提案します。</p></div></li>
+      <li class="step"><span class="step__no">04</span><div class="step__text"><h3 class="step__title">デザイン・制作</h3><p class="step__body">確認を重ねながら形にしていきます。</p></div></li>
+      <li class="step"><span class="step__no">05</span><div class="step__text"><h3 class="step__title">公開・改善</h3><p class="step__body">公開後も効果を見ながら伴走します。</p></div></li>
     </ol>
   </section>
 </main>
 
 <section class="cta" aria-labelledby="cta-title">
-  <span class="eyebrow">( Contact )</span>
-  <h2 class="cta__title" id="cta-title">お問い合わせは<br>こちら</h2>
-  <p class="cta__lead">デザインのご依頼、お見積もり、ちょっとしたご相談まで、お気軽にお問い合わせください。</p>
-  <div class="status"><span class="dot" aria-hidden="true"></span>デザイン依頼 受付中</div>
-  <a class="btn btn--en" href="contact.html">CONTACT<span aria-hidden="true">→</span></a>
+  <div class="cta__main">
+    <span class="eyebrow">( Contact )</span>
+    <h2 class="cta__title" id="cta-title">お問い合わせは<br class="sp-only">こちら</h2>
+    <p class="cta__lead">デザインのご依頼、お見積もり、ちょっとしたご相談まで、お気軽にお問い合わせください。</p>
+  </div>
+  <div class="cta__action">
+    <div class="status"><span class="dot" aria-hidden="true"></span>デザイン依頼 受付中</div>
+    <a class="btn btn--en btn--lg" href="contact.html">CONTACT<span aria-hidden="true">→</span></a>
+  </div>
 </section>
 <footer class="site-footer">
-  <a class="logo" href="index.html">yuyadesign<span class="dot" aria-hidden="true"></span></a>
-  <p class="site-footer__copy">デザインで、<br>伝わるを変える。</p>
-  <div class="site-footer__cols">
-    <nav class="site-footer__nav site-footer__nav--menu" aria-label="フッターメニュー">
-      <span class="site-footer__label">( Menu )</span>
-      <a href="index.html">HOME</a>
-      <a href="about.html">ABOUT</a>
-      <a href="services.html">SERVICES</a>
-      <a href="blog.html">BLOG</a>
-      <a href="contact.html">CONTACT</a>
-    </nav>
-    <nav class="site-footer__nav" aria-label="SNS">
-      <span class="site-footer__label">( Follow )</span>
-      <a href="#" target="_blank" rel="noopener">X（Twitter） ↗</a>
-      <a href="#" target="_blank" rel="noopener">YouTube ↗</a>
-      <a href="#" target="_blank" rel="noopener">TikTok ↗</a>
-      <span class="site-footer__org">運営：yuyadesign</span>
-    </nav>
+  <div class="site-footer__top">
+    <div class="site-footer__brand">
+      <a class="logo" href="index.html">yuyadesign<span class="dot" aria-hidden="true"></span></a>
+      <p class="site-footer__copy">デザインで、<br>伝わるを変える。</p>
+    </div>
+    <div class="site-footer__cols">
+      <nav class="site-footer__nav site-footer__nav--menu" aria-label="フッターメニュー">
+        <span class="site-footer__label">( Menu )</span>
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="services.html">SERVICES</a>
+        <a href="blog.html">BLOG</a>
+        <a href="contact.html">CONTACT</a>
+      </nav>
+      <nav class="site-footer__nav" aria-label="SNS">
+        <span class="site-footer__label">( Follow )</span>
+        <a href="#" target="_blank" rel="noopener">X（Twitter） ↗</a>
+        <a href="#" target="_blank" rel="noopener">YouTube ↗</a>
+        <a href="#" target="_blank" rel="noopener">TikTok ↗</a>
+        <span class="site-footer__label site-footer__label--company pc-only">( Company )</span>
+        <span class="site-footer__org">運営：yuyadesign</span>
+      </nav>
+    </div>
   </div>
   <div class="site-footer__bottom">
     <div class="site-footer__legal"><a href="privacy.html">プライバシーポリシー</a><a href="#">特定商取引法に基づく表示</a></div>

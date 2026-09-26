@@ -7,16 +7,27 @@ export const esc = s => String(s)
 export const dot = '<span class="dot" aria-hidden="true"></span>';
 export const logo = `yuyadesign${dot}`;
 
-export const secHead = (eyebrow, title, { tag = 'h2', id } = {}) => `
-    <div class="sec-head">
+// 見出しブロック。link を渡すと PC で右端にリンクを置く
+export const secHead = (eyebrow, title, { link } = {}) => {
+  const head = `<div class="sec-head">
       <span class="eyebrow">( ${eyebrow} )</span>
-      <${tag} class="h2"${id ? ` id="${id}"` : ''}>${title}</${tag}>
+      <h2 class="h2">${title}</h2>
     </div>`;
+  return link
+    ? `<div class="sec-head-row">
+    ${head}
+    <a class="text-link pc-only" href="${link[1]}">${link[0]}</a>
+  </div>`
+    : head;
+};
 
 const header = current => `
 <a class="skip-link" href="#main">本文へスキップ</a>
 <header class="site-header">
   <a class="logo" href="index.html">${logo}</a>
+  <nav class="gnav" aria-label="メインメニュー">
+${nav.map(m => `    <a href="${m.href}"${m.key === current ? ' aria-current="page"' : ''}>${m.en}</a>`).join('\n')}
+  </nav>
   <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="メニューを開く" data-menu-open>
     <span class="menu-btn__line"></span><span class="menu-btn__line"></span>
   </button>
@@ -28,7 +39,7 @@ const header = current => `
       <span class="menu-btn__line"></span><span class="menu-btn__line"></span>
     </button>
   </div>
-  <nav class="menu__nav" aria-label="メインメニュー">
+  <nav class="menu__nav" aria-label="メニュー">
 ${nav.map(m => `    <a class="menu__item" href="${m.href}"${m.key === current ? ' aria-current="page"' : ''}><span class="menu__en">${m.en}</span><span class="menu__ja">${m.ja}</span></a>`).join('\n')}
   </nav>
   <div class="menu__foot">
@@ -42,8 +53,10 @@ export const pageHero = ({ en, ja, crumbs, lead }) => `
     ${breadcrumb(crumbs)}
     <div class="page-hero__body">
       <div class="page-hero__en" aria-hidden="true">${en}</div>
-      <h1 class="page-hero__ja">${ja}</h1>
-      <p class="page-hero__lead">${lead}</p>
+      <div class="page-hero__row">
+        <h1 class="page-hero__ja">${ja}</h1>
+        <p class="page-hero__lead">${lead}</p>
+      </div>
     </div>
   </section>`;
 
@@ -53,25 +66,34 @@ export const breadcrumb = crumbs => `<nav class="crumb" aria-label="パンくず
 
 const footer = ({ cta = true } = {}) => `
 ${cta ? `<section class="cta" aria-labelledby="cta-title">
-  <span class="eyebrow">( Contact )</span>
-  <h2 class="cta__title" id="cta-title">お問い合わせは<br>こちら</h2>
-  <p class="cta__lead">デザインのご依頼、お見積もり、ちょっとしたご相談まで、お気軽にお問い合わせください。</p>
-  <div class="status">${dot}デザイン依頼 受付中</div>
-  <a class="btn btn--en" href="contact.html">CONTACT<span aria-hidden="true">→</span></a>
+  <div class="cta__main">
+    <span class="eyebrow">( Contact )</span>
+    <h2 class="cta__title" id="cta-title">お問い合わせは<br class="sp-only">こちら</h2>
+    <p class="cta__lead">デザインのご依頼、お見積もり、ちょっとしたご相談まで、お気軽にお問い合わせください。</p>
+  </div>
+  <div class="cta__action">
+    <div class="status">${dot}デザイン依頼 受付中</div>
+    <a class="btn btn--en btn--lg" href="contact.html">CONTACT<span aria-hidden="true">→</span></a>
+  </div>
 </section>` : ''}
 <footer class="site-footer">
-  <a class="logo" href="index.html">${logo}</a>
-  <p class="site-footer__copy">デザインで、<br>伝わるを変える。</p>
-  <div class="site-footer__cols">
-    <nav class="site-footer__nav site-footer__nav--menu" aria-label="フッターメニュー">
-      <span class="site-footer__label">( Menu )</span>
-${nav.map(m => `      <a href="${m.href}">${m.en}</a>`).join('\n')}
-    </nav>
-    <nav class="site-footer__nav" aria-label="SNS">
-      <span class="site-footer__label">( Follow )</span>
-${sns.map(s => `      <a href="${s.href}" target="_blank" rel="noopener">${s.label} ↗</a>`).join('\n')}
-      <span class="site-footer__org">運営：yuyadesign</span>
-    </nav>
+  <div class="site-footer__top">
+    <div class="site-footer__brand">
+      <a class="logo" href="index.html">${logo}</a>
+      <p class="site-footer__copy">デザインで、<br>伝わるを変える。</p>
+    </div>
+    <div class="site-footer__cols">
+      <nav class="site-footer__nav site-footer__nav--menu" aria-label="フッターメニュー">
+        <span class="site-footer__label">( Menu )</span>
+${nav.map(m => `        <a href="${m.href}">${m.en}</a>`).join('\n')}
+      </nav>
+      <nav class="site-footer__nav" aria-label="SNS">
+        <span class="site-footer__label">( Follow )</span>
+${sns.map(s => `        <a href="${s.href}" target="_blank" rel="noopener">${s.label} ↗</a>`).join('\n')}
+        <span class="site-footer__label site-footer__label--company pc-only">( Company )</span>
+        <span class="site-footer__org">運営：yuyadesign</span>
+      </nav>
+    </div>
   </div>
   <div class="site-footer__bottom">
     <div class="site-footer__legal"><a href="privacy.html">プライバシーポリシー</a><a href="#">特定商取引法に基づく表示</a></div>
