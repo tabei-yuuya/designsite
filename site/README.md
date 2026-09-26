@@ -18,6 +18,8 @@ npm run build   # src/ から public/*.html・robots.txt・sitemap.xml を生成
 npm run serve   # http://localhost:8080/
 ```
 
+公開先: https://yuyadesign.netlify.app （Netlify。リポジトリ直下の `netlify.toml` でビルド設定）
+
 | ページ | ファイル |
 | --- | --- |
 | TOP | index.html |
@@ -31,7 +33,6 @@ npm run serve   # http://localhost:8080/
 | 404 | 404.html（サイトのルートに置く前提） |
 
 未対応・仮のもの:
-- `SITE_URL` が未設定（ドメイン決定後に設定して再ビルド）
 - アクセス解析タグは未設置
 - お問い合わせフォームは送信を模擬しているだけ（`assets/js/contact.js` の TODO）
 - favicon・OGP画像（`assets/img/ogp.png`）は仮で作成したもの

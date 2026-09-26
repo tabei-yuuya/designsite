@@ -1,0 +1,5 @@
+# Netlify: リポジトリを連携したときの設定（site/ をビルドして public/ を公開）
+[build]
+  base = "site"
+  command = "node build.mjs"
+  publish = "public"
