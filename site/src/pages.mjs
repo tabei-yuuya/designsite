@@ -53,12 +53,13 @@ export const postFeatured = p => `
       </a>`;
 
 /* ---------- ABOUT ---------- */
-const about = () => layout({
+const about = file => layout({
+  file,
   title: 'ABOUT 私たちについて',
   description: 'yuyadesignは、ブランドやサービスの本質を整理し、届けたい人に届く形へと翻訳するデザイン会社です。',
   current: 'about',
   body: `${pageHero({
-    en: 'About', ja: '私たちについて', crumbs: [['HOME', 'index.html'], ['ABOUT']],
+    en: 'About', ja: '私たちについて', crumbs: [['HOME', './'], ['ABOUT']],
     lead: '見た目を整えるだけではなく、届けたい人に届く形をつくる。私たちは、ビジネスの課題に向き合うデザインパートナーです。'
   })}
   <div class="about-photo"><div class="ph ph--stripe" aria-hidden="true">about photo</div></div>
@@ -98,12 +99,13 @@ ${d.company.map(c => `      <div><dt>${c.k}</dt><dd>${c.v}</dd></div>`).join('\n
 });
 
 /* ---------- SERVICES ---------- */
-const services = () => layout({
+const services = file => layout({
+  file,
   title: 'SERVICES サービス',
   description: '企業様・個人のお客様それぞれの課題に合わせて、戦略から制作、公開後の改善までご提供します。',
   current: 'services',
   body: `${pageHero({
-    en: 'Services', ja: 'サービス', crumbs: [['HOME', 'index.html'], ['SERVICES']],
+    en: 'Services', ja: 'サービス', crumbs: [['HOME', './'], ['SERVICES']],
     lead: '企業様・個人のお客様それぞれの課題に合わせて、戦略から制作、公開後の改善までご提供します。'
   })}
   <nav class="tabs" aria-label="サービスの種類" data-section-tabs>
@@ -129,12 +131,13 @@ ${d.steps.map(st => `      <li class="step"><span class="step__no">${st.no}</spa
 });
 
 /* ---------- サービス詳細 ---------- */
-const serviceBranding = () => layout({
+const serviceBranding = file => layout({
+  file,
   title: 'ブランディング｜SERVICES',
   description: '理念や強みを言語化し、ロゴ・トーン・ガイドラインまで一貫したブランドの形をつくります。',
   current: 'services',
   body: `${pageHero({
-    en: 'Branding', ja: 'ブランディング', crumbs: [['HOME', 'index.html'], ['SERVICES', 'services.html'], ['ブランディング']],
+    en: 'Branding', ja: 'ブランディング', crumbs: [['HOME', './'], ['SERVICES', 'services.html'], ['ブランディング']],
     lead: '理念や強みを言語化し、ロゴ・トーン・ガイドラインまで一貫したブランドの形をつくります。'
   })}
   <div class="main-visual"><div class="ph ph--stripe ph--wide" aria-hidden="true">main visual</div></div>
@@ -184,15 +187,16 @@ ${d.services.slice(1).map(s => `      <a class="other-svc" href="${s.href}">
 });
 
 /* ---------- BLOG一覧 ---------- */
-const blog = () => {
+const blog = file => {
   const [first, ...rest] = d.posts;
   return layout({
+    file,
     title: 'BLOG ブログ',
     description: '制作の裏側や、伝わるデザインの考え方、プロジェクトの事例を発信しています。',
     current: 'blog',
     scripts: ['assets/js/blog.js'],
     body: `${pageHero({
-      en: 'Blog', ja: 'ブログ', crumbs: [['HOME', 'index.html'], ['BLOG']],
+      en: 'Blog', ja: 'ブログ', crumbs: [['HOME', './'], ['BLOG']],
       lead: '制作の裏側や、伝わるデザインの考え方、プロジェクトの事例を発信しています。'
     })}
   <div class="tabs" role="tablist" aria-label="カテゴリ">
@@ -219,7 +223,7 @@ ${d.blogCats.map((c, i) => `    <button class="tab" type="button" role="tab" ari
 };
 
 /* ---------- BLOG記事詳細 ---------- */
-const blogPost = () => {
+const blogPost = file => {
   const toc = [
     ['01', '見た目の前に、目的を決める'],
     ['02', '届けたい相手をひとりに絞る'],
@@ -229,12 +233,14 @@ const blogPost = () => {
   const title = '「整える」と「伝わる」のあいだにあるもの。デザインを始める前に考えていること';
   const shareUrl = esc(`https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}`);
   return layout({
+    file,
     title,
+    type: 'article',
     description: 'デザインの相談を受けたとき、私たちが最初に手を動かすのは画面の上ではありません。',
     current: 'blog',
     body: `
   <section class="post-head">
-    ${breadcrumb([['HOME', 'index.html'], ['BLOG', 'blog.html'], ['デザイン']])}
+    ${breadcrumb([['HOME', './'], ['BLOG', 'blog.html'], ['デザイン']])}
     <div class="post-head__inner">
       <div class="meta"><span>デザイン</span><time class="en" datetime="2026-09-12">2026.09.12</time></div>
       <h1 class="post-title">${title}</h1>
@@ -293,14 +299,15 @@ const field = ({ id, label, type = 'text', placeholder, required, autocomplete, 
         </div>`;
 };
 
-const contact = () => layout({
+const contact = file => layout({
+  file,
   title: 'CONTACT お問い合わせ',
   description: 'デザインのご依頼、お見積もり、ちょっとしたご相談まで、お気軽にお問い合わせください。',
   current: 'contact',
   cta: false,
   scripts: ['assets/js/contact.js'],
   body: `${pageHero({
-    en: 'Contact', ja: 'お問い合わせ', crumbs: [['HOME', 'index.html'], ['CONTACT']],
+    en: 'Contact', ja: 'お問い合わせ', crumbs: [['HOME', './'], ['CONTACT']],
     lead: 'デザインのご依頼、お見積もり、ちょっとしたご相談まで、お気軽にお問い合わせください。'
   })}
   <div class="contact">
@@ -356,12 +363,13 @@ ${d.faqs.map((q, i) => {
 });
 
 /* ---------- プライバシーポリシー ---------- */
-const privacy = () => layout({
+const privacy = file => layout({
+  file,
   title: 'プライバシーポリシー',
   description: 'yuyadesignの個人情報の取り扱いについて。',
   current: 'privacy',
   body: `${pageHero({
-    en: 'Privacy', ja: 'プライバシーポリシー', crumbs: [['HOME', 'index.html'], ['PRIVACY POLICY']],
+    en: 'Privacy', ja: 'プライバシーポリシー', crumbs: [['HOME', './'], ['PRIVACY POLICY']],
     lead: 'yuyadesign（以下「当社」）は、お客様の個人情報を以下の方針に基づき適切に取り扱います。'
   })}
   <div class="policy">
@@ -381,7 +389,8 @@ ${d.policy.map(pl => `      <section class="policy__item" id="policy-${pl.no}">
 /* ---------- TOP ---------- */
 const arrow = '<span class="arrow" aria-hidden="true">↗</span>';
 
-const top = () => layout({
+const top = file => layout({
+  file,
   title: '',
   description: '見た目を整えるだけではなく、届けたい人に届く形をつくる。yuyadesignは、ビジネスの課題に向き合うデザインパートナーです。',
   current: 'home',
@@ -464,8 +473,26 @@ ${d.media.map(m => `      <a class="media__item" href="${m.href}"${m.external ? 
   </section>`
 });
 
+/* ---------- 404 ---------- */
+// どの階層で表示されても読み込めるよう、<base href="/"> でサイトのルート基準にする
+const notFound = file => layout({
+  file,
+  title: 'ページが見つかりません',
+  description: 'お探しのページは見つかりませんでした。',
+  noindex: true,
+  base: '/',
+  body: `${pageHero({
+    en: '404', ja: 'ページが見つかりません', crumbs: [['HOME', './'], ['404']],
+    lead: 'お探しのページは、移動または削除された可能性があります。URLをご確認のうえ、トップページからお探しください。'
+  })}
+  <div class="section">
+    <a class="btn btn--en not-found__btn" href="./">BACK TO TOP<span aria-hidden="true">→</span></a>
+  </div>`
+});
+
 export const pages = {
   'index.html': top,
+  '404.html': notFound,
   'about.html': about,
   'services.html': services,
   'service-branding.html': serviceBranding,

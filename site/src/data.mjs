@@ -2,7 +2,7 @@
 // 会社概要（代表・所在地・設立）は「〇〇」の仮の値のまま。
 
 export const nav = [
-  { en: 'HOME', ja: 'ホーム', href: 'index.html', key: 'home' },
+  { en: 'HOME', ja: 'ホーム', href: './', key: 'home' },
   { en: 'ABOUT', ja: '私たちについて', href: 'about.html', key: 'about' },
   { en: 'SERVICES', ja: 'サービス', href: 'services.html', key: 'services' },
   { en: 'BLOG', ja: 'ブログ', href: 'blog.html', key: 'blog' },

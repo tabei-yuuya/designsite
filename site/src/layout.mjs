@@ -1,4 +1,7 @@
 import { nav, sns } from './data.mjs';
+import { SITE_URL, SITE_NAME } from './site.mjs';
+
+const abs = href => `${SITE_URL}/${href === './' ? '' : href}`;
 
 // テンプレート内で値をエスケープする
 export const esc = s => String(s)
@@ -24,7 +27,7 @@ export const secHead = (eyebrow, title, { link } = {}) => {
 const header = (current, overlay) => `
 <a class="skip-link" href="#main">本文へスキップ</a>
 <header class="site-header${overlay ? ' site-header--overlay' : ''}">
-  <a class="logo" href="index.html">${logo}</a>
+  <a class="logo" href="./">${logo}</a>
   <nav class="gnav" aria-label="メインメニュー">
 ${nav.map(m => `    <a href="${m.href}"${m.key === current ? ' aria-current="page"' : ''}>${m.en}</a>`).join('\n')}
   </nav>
@@ -60,9 +63,13 @@ export const pageHero = ({ en, ja, crumbs, lead }) => `
     </div>
   </section>`;
 
-// crumbs: [['HOME','index.html'], ['SERVICES','services.html'], ['ブランディング']]
+// crumbs: [['HOME','./'], ['SERVICES','services.html'], ['ブランディング']]
 export const breadcrumb = crumbs => `<nav class="crumb" aria-label="パンくずリスト"><ol>${crumbs.map(([label, href], i) =>
-  `<li>${href ? `<a href="${href}">${label}</a>` : `<span${i === crumbs.length - 1 ? ' aria-current="page"' : ''}>${label}</span>`}</li>`).join('')}</ol></nav>`;
+  `<li>${href ? `<a href="${href}">${label}</a>` : `<span${i === crumbs.length - 1 ? ' aria-current="page"' : ''}>${label}</span>`}</li>`).join('')}</ol></nav>${SITE_URL ? `
+    <script type="application/ld+json">${JSON.stringify({
+      '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+      itemListElement: crumbs.map(([name, href], i) => ({ '@type': 'ListItem', position: i + 1, name, ...(href ? { item: abs(href) } : {}) }))
+    })}</script>` : ''}`;
 
 const footer = ({ cta = true } = {}) => `
 ${cta ? `<section class="cta" aria-labelledby="cta-title">
@@ -79,7 +86,7 @@ ${cta ? `<section class="cta" aria-labelledby="cta-title">
 <footer class="site-footer">
   <div class="site-footer__top">
     <div class="site-footer__brand">
-      <a class="logo" href="index.html">${logo}</a>
+      <a class="logo" href="./">${logo}</a>
       <p class="site-footer__copy">デザインで、<br>伝わるを変える。</p>
     </div>
     <div class="site-footer__cols">
@@ -101,14 +108,31 @@ ${sns.map(s => `        <a href="${s.href}" target="_blank" rel="noopener">${s.l
   </div>
 </footer>`;
 
-export const layout = ({ title, description, current, body, cta = true, scripts = [], overlayHeader = false }) => `<!DOCTYPE html>
+export const layout = ({ file, title, description, current, body, cta = true, scripts = [], overlayHeader = false, type = 'website', noindex = false, base }) => {
+  const fullTitle = title ? `${title}｜${SITE_NAME}` : `${SITE_NAME}｜デザインで、伝わるを変える。`;
+  const url = file === 'index.html' ? abs('./') : abs(file);
+  return `<!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>${title ? `${title}｜yuyadesign` : 'yuyadesign｜デザインで、伝わるを変える。'}</title>
+${base ? `<base href="${base}">\n` : ''}<title>${fullTitle}</title>
 <meta name="description" content="${esc(description)}">
-<meta name="theme-color" content="#0F1012">
+${noindex ? '<meta name="robots" content="noindex">\n' : ''}${SITE_URL && !noindex ? `<link rel="canonical" href="${url}">\n` : ''}<meta name="theme-color" content="#0F1012">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="${type}">
+<meta property="og:site_name" content="${SITE_NAME}">
+<meta property="og:title" content="${esc(fullTitle)}">
+<meta property="og:description" content="${esc(description)}">
+<meta property="og:locale" content="ja_JP">
+${SITE_URL ? `<meta property="og:url" content="${url}">
+<meta property="og:image" content="${abs('assets/img/ogp.png')}">
+` : ''}<meta name="twitter:card" content="summary_large_image">
+${SITE_URL && file === 'index.html' ? `<script type="application/ld+json">${JSON.stringify({
+  '@context': 'https://schema.org', '@type': 'Organization', name: SITE_NAME, url: abs('./'), logo: abs('assets/img/icon-192.png')
+})}</script>
+` : ''}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@700&amp;family=Geist:wght@300;400&amp;family=Noto+Sans+JP:wght@400;700&amp;family=Shippori+Mincho:wght@400&amp;display=swap">
@@ -125,3 +149,4 @@ ${footer({ cta })}
 </body>
 </html>
 `;
+};

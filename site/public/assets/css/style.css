@@ -221,7 +221,7 @@ h1, h2, h3, p, dl, dd, figure { margin: 0; }
 .crumb li + li::before { content: "/"; padding: 0 .4em; }
 .page-hero__body, .page-hero__row { display: flex; flex-direction: column; gap: 24px; }
 .page-hero__en {
-  font: 700 64px/.85 var(--font-display); letter-spacing: -.03em;
+  font: 700 min(64px, 16.5vw)/.85 var(--font-display); letter-spacing: -.03em;
   text-transform: uppercase; word-break: keep-all;
 }
 .page-hero__ja { font: 400 26px/1.3 var(--font-ja); letter-spacing: .04em; }
@@ -847,3 +847,6 @@ textarea.input { min-height: 112px; resize: vertical; line-height: 1.8; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition-duration: 0s !important; }
 }
+
+/* ---------- 404 ---------- */
+.not-found__btn { max-width: 360px; }
